@@ -1,0 +1,31 @@
+
+.g-doc {
+  min-width: 960px;
+  /* max-width: 1205px; */
+}
+.g-limit {
+  width: 960px;
+  margin: 0 auto;
+}
+@media screen and (min-width:1205px){
+  .g-limit{
+    width: 1205px;
+  }
+}
+.g-hd { height: 8.8em; }
+.g-title,.g-follow { float: left; }
+.g-title { margin-top: 3em;}
+.g-follow { margin: 3.25em 0 0 3em; }
+.g-nav,.g-search { float: right; }
+.g-nav { margin-top: 3.6em; }
+.g-search { margin: 3.3em 1.4em 0 2.8em; }
+.g-pdt { margin: 6em 0; }
+.g-bd { margin: 8em 0 12em 0; }
+.g-side { float: right; width: 22.5em; margin-bottom: 5em; }
+.g-org { margin-bottom: 2em; }
+
+.g-main { position: absolute; top:0; bottom:0; left: 0; right: 0; margin-right: 24em; }
+.g-courses { margin-top: 3em; }
+.g-pages { position: absolute; right: 0; bottom: 0; }
+.g-foothead { margin: 9em 0 8em 5em; }
+
