@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<!--[if lte IE 6]><html class="ie ie6 lte_ie7 lte_le8 lte_ie9" lang="zh"><![endif]-->
-<!--[if IE 7]><html class="ie ie7 lte_ie7 lte_ie8 lte_ie9" lang="zh"><[endif]-->
-<!--[if IE 8]><html class="ie ie8 lte_ie8 lte_ie9" lang="zh"><[endif]-->
-<!--[if IE 9]><html class="ie ie9 lte_ie9" lang="zh"><[endif]-->
+<!--[if IE 8]><html class="ie ie8 lteie8 lteie9" lang="zh-cmn-Hans"><![endif]-->
+<!--[if IE 9]><html class="ie ie9 lteie9" lang="zh-cmn-Hans"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="zh">  
+<html lang="zh-cmn-Hans">  
 <!--<[endif]-->
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>网易教育产品部-专注打造线上教育品牌</title>
+  <meta name="keywords" content="优质课程、智能问答、趣味实践、随心笔记、教育、网易公开课、网易云课堂、中国大学MOOC、产品设计、编程语言、计算机开发、交互视觉设计、视频教程、交流互动、免费、名师、实用、培训">
+  <meta name="description" content="教育产品部是网易公司用于展示的一款在线教育产品交流平台，该平台面向来访者提供海量免费、优质课程案例，创新的个性化参观体验，自由开放的交流互动环境。">
+  <meta name="author" content="zwey,cn.huangzhiwei@gmail.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="index,follow">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/layout.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <style>
-    /* TEST CSS */
-    html{
-      background: skyblue;
-    }
-
-  </style>
-
 </head>
 <body>
-<div class="g-doc f-bgray-1">
+<div class="g-doc">
   <!-- 顶部提示条 -->
-  <div class="g-tp f-bgray">
+  <div class="f-bgray">
     <div class="g-limit">
       <div class="m-tip f-cb">
         <p class="msg">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！<a class="u-link" href="http://study.163.com/">立即查看&gt;</a></p>
@@ -37,182 +34,320 @@
   </div>
   <!-- 头部 -->
   <div class="g-limit">
-    <header class="g-hd f-cb">
+    <header class="g-hd f-cb f-pr">
       <!-- 标题模块 -->
-      <div class="g-title"><h1 class="m-title"><a href="http://study.163.com/"><em class="logo">EDU</em><i>I</i><em class="txt">网易教育产品部</em></a></h1></div>
-      <div class="g-follow">
-        <!-- 关注模块 -->
-        <div class="m-follow f-cb">
-          <div class="follow z-active"><a class="f-shadow" href="#">+ 关注</a></div>
-          <div class="followed"><i class="u-icon">&#xe733;</i>已关注<i class="line">I</i><a class="cancel u-link" href="#">取消</a></div>
-          <div class="fans">粉丝 45</div>
-        </div>
+      <h1 class="m-title"><a href="http://study.163.com/"><em class="logo f-cgreen">EDU</em><i class="f-cgreen">I</i><em class="txt">网易教育产品部</em></a></h1>
+      <!-- 关注模块 -->
+      <div class="m-follow">
+        <a class="follow z-active f-shadow" href="#">+ 关注</a>
+        <div class="cancel"><i class="hook u-icon">&#xe733;</i>已关注<i class="line">I</i><a class="u-link" href="#">取消</a></div>
+        <div class="fans">粉丝 45</div>
       </div>
       <!-- 搜索模块 -->
-      <div class="g-search">
-        <div class="m-search">
-          <div class="before u-icon z-active">&#xe615;</div>
-          <div class="after">
-            <input list="search_value" name="keyword" form="search_form" type="text" placeholder="输入课程名称" autocomplete="on" /><input class="u-icon" form="search_form" type="submit" value="&#xe615;" />
-          </div>
-          <form id="search_form" name="search_form" action="https://study.163.com/courses-search" type="hiden" method="GET" enctype="application/x-www-form-urlencoded"></form>
-        </div>
+      <div class="m-search">
+        <i class="icon u-icon">&#xe615;</i><form name="search_form" action="https://study.163.com/courses-search" type="hiden" method="GET" enctype="application/x-www-form-urlencoded"><input name="keyword"  type="text" placeholder="输入课程名称" autocomplete="off" /><input class="u-icon" type="submit" value="&#xe615;" /></form>
       </div>
       <!-- 导航条模块 -->
-      <div class="g-nav">
-        <ul class="m-navbar">
-          <li><a class="item" href="http://open.163.com/">网易公开课</a></li><li><a class="item" href="http://study.163.com/">云课堂</a></li><li><a class="item" href="http://www.icourse163.org/">中国大学MOOC</a></li>
-        </ul>
-      </div>
+      <ul class="m-nav">
+        <li><a class="item" href="http://open.163.com/">网易公开课</a></li><li><a class="item" href="http://study.163.com/">云课堂</a></li><li><a class="item" href="http://www.icourse163.org/">中国大学MOOC</a></li>
+      </ul>
     </header>
   </div>
   <!-- 轮播图 -->
-  <div class="g-bn">
-    <div class="m-banner">
-      <ul class="container">
-        <li><a href="http://study.163.com/"><img src="./images/banner1.jpg" alt="知识改变世界" /></a></li>
-        <li class="z-current"><a href="http://study.163.com/"><img src="./images/banner2.jpg" alt="教育改变未来" /></a></li>
-        <li><a href="http://study.163.com/"><img src="./images/banner3.jpg" alt="遇见更好的自己" /></a></li>
-      </ul>
-      <ul class="controls">
-        <li class="first"></li><li class="z-current"></li><li></li>
-      </ul>
-    </div>
+  <div class="m-banner">
+    <a href="http://study.163.com/"><img src="./images/banner1.jpg" alt="知识改变世界" width="1652" height="460" /></a>
+    <a class="z-current" href="http://study.163.com/"><img src="./images/banner2.jpg" alt="教育改变未来" width="1652" height="460" /></a>
+    <a href="http://study.163.com/"><img src="./images/banner3.jpg" alt="遇见更好的自己" width="1652" height="460" /></a>
+    <ul class="controls"><li class="first"></li><li class="z-current"></li><li></li></ul>
   </div>
   <!-- 产品展示 -->
   <div class="g-limit">
-    <div class="g-pdt">
-      <div class="m-products f-cb">
-        <div class="pdt gkk">
-          <div class="logo"></div>
-          <article>
-            <h3><a href="http://open.163.com/">网易公开课</a></h3>
-            <p class="f-tf">推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深入剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
-            <a class="u-link" href="http://open.163.com/">了解更多&gt;</a>
-          </article>
-        </div>
-        <div class="pdt ykt">
-          <div class="logo"></div>
-          <article>
-            <h3><a href="http://study.163.com/">云课堂</a></h3>
-            <p class="f-tf">网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。</p>
-            <a class="u-link" href="http://study.163.com/">了解更多&gt;</a>
-          </article>
-        </div>
-        <div class="pdt mooc">
-          <div class="logo"></div>
-          <article>
-            <h3><a href="http://www.icourse163.org/">中国大学MOOC</a></h3>
-            <p class="f-tf">是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
-            <a class="u-link" href="http://www.icourse163.org/">了解更多&gt;</a>
-          </article>
-        </div>
+    <div class="m-products f-cb">
+      <div class="box">
+        <a class="logo gkk" href="https://open.163.com/"></a>
+        <article>
+          <h3><a href="https://open.163.com/">网易公开课</a></h3>
+          <p class="f-tf">推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深入剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+          <a class="u-link" href="http://open.163.com/">了解更多&gt;</a>
+        </article>
+      </div>
+      <div class="box">
+        <a class="logo ykt" href="https://study.163.com/"></a>
+        <article>
+          <h3><a href="https://study.163.com/">云课堂</a></h3>
+          <p class="f-tf">网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。</p>
+          <a class="u-link" href="http://study.163.com/">了解更多&gt;</a>
+        </article>
+      </div>
+      <div class="box">
+        <a class="logo mooc" href="http://www.icourse163.org/"></a>
+        <article>
+          <h3><a href="http://www.icourse163.org/">中国大学MOOC</a></h3>
+          <p class="f-tf">是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
+          <a class="u-link" href="http://www.icourse163.org/">了解更多&gt;</a>
+        </article>
       </div>
     </div>
+
   </div>
   <!-- 工作环境 -->
-  <div class="g-gy">
-    <div class="m-gallery">
-      <div class="pos">
-        <div class="nos">
-          <img src="./images/environment1.jpg" alt="工作环境" width="320" height="220" />
-          <img src="./images/environment2.jpg" alt="工作环境" width="320" height="220" />
-          <img src="./images/environment3.jpg" alt="工作环境" width="320" height="220" />
-          <img src="./images/environment4.jpg" alt="工作环境" width="320" height="220" />
-          <img src="./images/environment5.jpg" alt="工作环境" width="320" height="220" />
-        </div>
-      </div>
+  <div class="m-gallery">
+    <div class="container">
+      <img src="./images/environment1.jpg" alt="工作环境" width="320" height="220" />
+      <img src="./images/environment2.jpg" alt="工作环境" width="320" height="220" />
+      <img src="./images/environment3.jpg" alt="工作环境" width="320" height="220" />
+      <img src="./images/environment4.jpg" alt="工作环境" width="320" height="220" />
+      <img src="./images/environment5.jpg" alt="工作环境" width="320" height="220" />
     </div>
   </div>
+
   <!-- 主内容 -->
   <div class="g-bd">
     <div class="g-limit f-cb f-pr">
-      <!-- 机构介绍视频&热门排行 -->
       <div class="g-side">
-        <div class="g-org">
-          <div class="m-org f-shadow">
-            <h4>机构介绍</h4>
-            <div class="content">
-              <p>观看下面的视频来了解吧</p>
-              <div>
-                <img src="./images/videolink.jpg" alt="机构介绍视频封面" width="180" height="110" />
-                <a class="u-icon play" href="#">&#xe607;</a>
-              </div>
+        <!-- 机构介绍模块 -->
+        <div class="m-org f-shadow">
+          <h4>机构介绍</h4>
+          <div class="content">
+            观看下面的视频来了解吧
+            <div class="imgwrap">
+              <img src="./images/videolink.jpg" alt="机构介绍视频封面" width="180" height="110" />
+              <a class="u-icon play" href="#">&#xe607;</a>
             </div>
           </div>
         </div>
-        <div class="g-hot">
-          <div class="m-hot f-shadow">
-            <h4>最热排行</h4>
-            <ul class="content">
-              <li>
-                <a class="f-cb" href="#">
-                  <img src="./images/course_small1.jpg" alt="课程图标" width="50" height="50" />
+        <!-- 最热排行模块 -->
+        <div class="m-hot f-shadow">
+          <h4>最热排行</h4>
+          <ul class="content">
+            <li>
+              <a class="f-cb" href="#">
+                <img src="./images/course_small1.jpg" alt="课程图标" width="50" height="50" />
+                <div class="txt">
                   <div>photoshop公开课</div>
-                  <div><i class="u-icon">&#xe604;</i>25741</div>
-                </a>
-              </li>
-              <li>
-                <a class="f-cb" href="#">
-                  <img src="./images/course_small1.jpg" alt="课程图标" width="50" height="50" />
-                  <div>photoshop公开课</div>
-                  <div><i class="u-icon">&#xe604;</i>25741</div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="g-main">
-        <div class="g-tabs">
-          <div class="m-tabs f-shadow">
-            <h3><a class="z-crt" herf="#">产品设计</a></h3><h3><a href="#">编程语言</a></h3>
-          </div>
-        </div>
-        <div class="g-courses">
-          <ul class="m-courses">
-            <li class="card f-shadow">
-              <!-- 卡片模块 -->
-              <a class="poster" href="#"><img src="./images/course_big1.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
-              <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
-              <a class="provider f-toe">网易web前端工程师微专业网易web前端工程师微专业</a>
-              <div class="count"><i class="u-icon">&#xe604;</i>12345</div>
-              <em class="price">&yen; 98.9</em>
-              <!-- 浮层模块 -->
-              <div class="pop f-shadow">
-                <img src="/images/course_big1.jpg" alt="课程封面" width="223" height="124" />
-                <div class="info">
-                  <div class="name f-toe">前端工程师微专业</div>
-                  <div class="count">12345 人在学</div>
-                  <div class="provider f-toe">发布者：网易云课堂</div>
-                  <div class="category">分类：暂无</div>
+                  <div><i class="u-icon">&#xe604;</i> 25741</div>
                 </div>
-                <div class="describe f-tf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, temporibus consequuntur natus inventore ad sed officiis ipsa voluptates nesciunt odit illo fugit praesentium eaque accusantium voluptate exercitationem omnis qui et.</div>
-              </div>
+              </a>
+            </li>
+            <li>
+              <a class="f-cb" href="#">
+                <img src="./images/course_small2.jpg" alt="课程图标" width="50" height="50" />
+                <div class="txt">
+                  <div>photoshop公开课</div>
+                  <div><i class="u-icon">&#xe604;</i> 25741</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="f-cb" href="#">
+                <img src="./images/course_small3.jpg" alt="课程图标" width="50" height="50" />
+                <div class="txt">
+                  <div>photoshop公开课</div>
+                  <div><i class="u-icon">&#xe604;</i> 25741</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="f-cb" href="#">
+                <img src="./images/course_small4.jpg" alt="课程图标" width="50" height="50" />
+                <div class="txt">
+                  <div>photoshop公开课</div>
+                  <div><i class="u-icon">&#xe604;</i> 25741</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="f-cb" href="#">
+                <img src="./images/course_small5.jpg" alt="课程图标" width="50" height="50" />
+                <div class="txt">
+                  <div>photoshop公开课</div>
+                  <div><i class="u-icon">&#xe604;</i> 25741</div>
+                </div>
+              </a>
             </li>
           </ul>
         </div>
-        <div class="g-pages">
-          <div class="m-pages">
-            <a class="prev" href="#">&lt;</a>
-            <a class="z-crt" href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a class="next" href="#">&gt;</a>
-          </div>
+      </div>
+      <div class="g-main">
+        <!-- tab模块 -->
+        <div class="m-tabs f-shadow">
+          <h3><a class="z-crt" herf="#">产品设计</a></h3><h3><a href="#">编程语言</a></h3>
         </div>
+        <!-- 课程模块 -->
+        <ul class="m-courses">
+          <li class="card f-shadow">
+            <!-- 卡片模块 -->
+            <a class="poster" href="#"><img src="./images/course_big1.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
+            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
+            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
+            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
+            <em class="price">&yen; 98.9</em>
+            <!-- 浮层模块 -->
+            <div class="pop f-shadow">
+              <img src="/images/course_big1.jpg" alt="课程封面" width="223" height="124" />
+              <div class="info">
+                <div class="title f-toe">前端工程师微专业</div>
+                <div class="studys">12345 人在学</div>
+                <div class="post f-toe">发布者：网易云课堂</div>
+                <div class="category">分类：暂无</div>
+              </div>
+              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
+            </div>
+          </li>
+          <li class="card f-shadow">
+            <!-- 卡片模块 -->
+            <a class="poster" href="#"><img src="./images/course_big2.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
+            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
+            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
+            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
+            <em class="price">&yen; 98.9</em>
+            <!-- 浮层模块 -->
+            <div class="pop f-shadow">
+              <img src="/images/course_big2.jpg" alt="课程封面" width="223" height="124" />
+              <div class="info">
+                <div class="title f-toe">前端工程师微专业</div>
+                <div class="studys">12345 人在学</div>
+                <div class="post f-toe">发布者：网易云课堂</div>
+                <div class="category">分类：暂无</div>
+              </div>
+              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
+            </div>
+          </li>
+          <li class="card f-shadow">
+            <!-- 卡片模块 -->
+            <a class="poster" href="#"><img src="./images/course_big3.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
+            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
+            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
+            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
+            <em class="price">&yen; 98.9</em>
+            <!-- 浮层模块 -->
+            <div class="pop f-shadow">
+              <img src="/images/course_big3.jpg" alt="课程封面" width="223" height="124" />
+              <div class="info">
+                <div class="title f-toe">前端工程师微专业</div>
+                <div class="studys">12345 人在学</div>
+                <div class="post f-toe">发布者：网易云课堂</div>
+                <div class="category">分类：暂无</div>
+              </div>
+              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
+            </div>
+          </li>
+          <li class="card f-shadow">
+            <!-- 卡片模块 -->
+            <a class="poster" href="#"><img src="./images/course_big4.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
+            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
+            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
+            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
+            <em class="price">&yen; 98.9</em>
+            <!-- 浮层模块 -->
+            <div class="pop f-shadow">
+              <img src="/images/course_big4.jpg" alt="课程封面" width="223" height="124" />
+              <div class="info">
+                <div class="title f-toe">前端工程师微专业</div>
+                <div class="studys">12345 人在学</div>
+                <div class="post f-toe">发布者：网易云课堂</div>
+                <div class="category">分类：暂无</div>
+              </div>
+              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
+            </div>
+          </li>
+          <li class="card f-shadow">
+            <!-- 卡片模块 -->
+            <a class="poster" href="#"><img src="./images/course_big5.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
+            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
+            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
+            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
+            <em class="price">&yen; 98.9</em>
+            <!-- 浮层模块 -->
+            <div class="pop f-shadow">
+              <img src="/images/course_big5.jpg" alt="课程封面" width="223" height="124" />
+              <div class="info">
+                <div class="title f-toe">前端工程师微专业</div>
+                <div class="studys">12345 人在学</div>
+                <div class="post f-toe">发布者：网易云课堂</div>
+                <div class="category">分类：暂无</div>
+              </div>
+              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
+            </div>
+          </li>
+          <li class="card f-shadow">
+            <!-- 卡片模块 -->
+            <a class="poster" href="#"><img src="./images/course_big6.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
+            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
+            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
+            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
+            <em class="price">&yen; 98.9</em>
+            <!-- 浮层模块 -->
+            <div class="pop f-shadow">
+              <img src="/images/course_big6.jpg" alt="课程封面" width="223" height="124" />
+              <div class="info">
+                <div class="title f-toe">前端工程师微专业</div>
+                <div class="studys">12345 人在学</div>
+                <div class="post f-toe">发布者：网易云课堂</div>
+                <div class="category">分类：暂无</div>
+              </div>
+              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
+            </div>
+          </li>
+          <li class="card f-shadow">
+            <!-- 卡片模块 -->
+            <a class="poster" href="#"><img src="./images/course_big3.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
+            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
+            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
+            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
+            <em class="price">&yen; 98.9</em>
+            <!-- 浮层模块 -->
+            <div class="pop f-shadow">
+              <img src="/images/course_big3.jpg" alt="课程封面" width="223" height="124" />
+              <div class="info">
+                <div class="title f-toe">前端工程师微专业</div>
+                <div class="studys">12345 人在学</div>
+                <div class="post f-toe">发布者：网易云课堂</div>
+                <div class="category">分类：暂无</div>
+              </div>
+              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
+            </div>
+          </li>
+          <li class="card f-shadow">
+            <!-- 卡片模块 -->
+            <a class="poster" href="#"><img src="./images/course_big6.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
+            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
+            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
+            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
+            <em class="price">&yen; 98.9</em>
+            <!-- 浮层模块 -->
+            <div class="pop f-shadow">
+              <img src="/images/course_big6.jpg" alt="课程封面" width="223" height="124" />
+              <div class="info">
+                <div class="title f-toe">前端工程师微专业</div>
+                <div class="studys">12345 人在学</div>
+                <div class="post f-toe">发布者：网易云课堂</div>
+                <div class="category">分类：暂无</div>
+              </div>
+              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- 分页器模块 -->
+      <div class="m-pages">
+        <a class="prev" href="#">&lt;</a>
+        <a class="z-crt" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a class="next" href="#">&gt;</a>
       </div>
     </div>
   </div>
   <!-- 脚部 -->
   <div class="g-ft f-bblack">
     <footer class="g-limit f-cb">
-      <div class="g-foothead f-fl">
+      <div class="g-fthead f-fl">
         <!-- 网站标题 -->
-        <div class="m-title m-title-ft"><a href="http://study.163.com/"><em class="logo">EDU</em><i>I</i><em class="txt">网易教育产品部</em></a></div>
+        <div class="m-title m-title-ft"><a href="http://study.163.com/"><em class="logo f-cgreen">EDU</em><i class="f-cgreen">I</i><em class="txt f-cgreen">网易教育产品部</em></a></div>
         <!-- 备案信息 -->
         <div class="m-record">
           <p>&copy;2014 icourse163.org 浙ICP备08114786号-1</p>
@@ -244,11 +379,11 @@
   <div class="m-mask"></div>
   <div class="m-login">
     <i class="u-icon close">&#xe606;</i>
-    <form id="loginform" action="http://study.163.com/webDev/login.htm" type="hiden" method="GET" target="_self">
+    <form id="loginform" action="http://study.163.com/webDev/login.htm" method="GET" target="_self">
       <fieldset form="loginform">
         <legend class="title">登录网易云课堂</legend>
-        <input name="userName" type="text" placeholder="账号" />
-        <input name="password" class="pwd" type="password" placeholder="密码" />
+        <input name="userName" type="text" placeholder="账号" autocomplete="off" />
+        <input name="password" class="pwd" type="password" placeholder="密码" autocomplete="off" />
         <div class="msg z-show">请输入正确的账号和密码!</div>
         <button class="f-shadow" type="submit">登&emsp;&emsp;录</button>
       </fieldset>
@@ -270,27 +405,5 @@
     </video>
   </div>
 </div>
-
-<!-- 中间参考线 -->
-<style>
-  .g-line{
-    position: fixed;
-    top: 0;
-    left: 50%;
-    bottom: 0;
-    width: 1px;
-    height: 100%;
-    background: red;
-    z-index: 100;
-  }
-</style>
-<div class="g-line"></div>
-<script>
-  let search = document.getElementsByClassName('m-search')[0],
-      after = search.getElementsByClassName('after')[0],
-      before = search.getElementsByClassName('before')[0],
-      searchBox = after.getElementsByTagName('input')[0];
-
-</script>
 </body>
 </html>

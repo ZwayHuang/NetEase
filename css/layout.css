@@ -1,31 +1,66 @@
-
-.g-doc {
-  min-width: 960px;
-  /* max-width: 1205px; */
+body,.g-doc {
+  min-width: 96rem;
 }
 .g-limit {
-  width: 960px;
+  /* width: 960px; */
+  width: 96rem;
   margin: 0 auto;
 }
 @media screen and (min-width:1205px){
   .g-limit{
-    width: 1205px;
+    /* width: 1205px; */
+    width: 120.5rem;
   }
 }
-.g-hd { height: 8.8em; }
-.g-title,.g-follow { float: left; }
-.g-title { margin-top: 3em;}
-.g-follow { margin: 3.25em 0 0 3em; }
-.g-nav,.g-search { float: right; }
-.g-nav { margin-top: 3.6em; }
-.g-search { margin: 3.3em 1.4em 0 2.8em; }
-.g-pdt { margin: 6em 0; }
-.g-bd { margin: 8em 0 12em 0; }
-.g-side { float: right; width: 22.5em; margin-bottom: 5em; }
-.g-org { margin-bottom: 2em; }
+.m-tip,
+.m-title,
+.m-follow,
+.m-nav,
+.m-search,
+.m-banner,
+.m-products,
+.m-gallery,
+.m-org,
+.m-hot,
+.m-tabs,
+.m-courses,
+.m-pages,
+.m-title-ft,
+.m-record,
+.m-links,
+.m-login,
+.m-video{
+  font-size: 1rem;
+}
 
-.g-main { position: absolute; top:0; bottom:0; left: 0; right: 0; margin-right: 24em; }
-.g-courses { margin-top: 3em; }
-.g-pages { position: absolute; right: 0; bottom: 0; }
-.g-foothead { margin: 9em 0 8em 5em; }
+.g-hd { height: 8.8rem; }
+  .m-title,.m-follow,.m-nav,.m-search { line-height: 8.8rem; }
+  .m-title,.m-follow { float: left; }
+  .m-nav,.m-search   { float: right; }
+  .m-follow   { margin: 0 0 0 3em; }
+  .m-nav      { margin: 0 6.6em 0 0; }
+  .m-search   { position: absolute; top: 0; right: 1.4em; }
+  .m-products { margin: 6em 0; }
 
+.g-bd { margin: 8rem 0 12rem 0; }
+  .g-side {
+    float: right;
+    width: 22.5rem;
+    margin: 0 0 5rem 0;
+  }
+    .m-org { margin-bottom: 2em; }
+  .g-main { margin: 0 24rem 0 0; height: 100%; }
+    .m-courses { margin: 3em -1.5em 3em 0; }
+    .m-pages {
+      position: absolute;
+      right: 24rem;
+      bottom: 0;
+    }
+
+.g-fthead { margin: 9rem 0 8rem 5rem; }
+  .m-title-ft { float: none; line-height: 1; }
+  .m-record { margin: 2.8em 0 0 0; }
+  .m-links  { margin: 8em 0 0 0; }
+  .m-links.friend { margin-left: 14.5em; }
+  .m-links.about  { margin-left: 9em; }
+  .m-links.more   { margin-left: 6.5em; }
