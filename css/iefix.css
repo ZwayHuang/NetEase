@@ -13,10 +13,6 @@ header,nav,section,article,main,aside,footer,audio,video,canvas,datalist,dialog,
 /* ****************************布局兼容**************************** */
 .lteie8 body,.g-doc { min-width: 960px; }
 .lteie8 .g-limit { min-width: 960px; max-width: 1205px; margin: 0 auto; }
-/* IE8不支持媒体查询 */
-/* @media screen and (min-width:1205px){
-  .g-limit{ width: 1205px; }
-} */
 
 .lteie8 .g-hd { height: 88px; }
 .lteie8 .m-title,.lteie8 .m-follow,.lteie8 .m-nav,.lteie8 .m-search { line-height: 88px; }
