@@ -1,3 +1,13 @@
+/* ****************************功能函数兼容**************************** */
+.lteie8 .f-cb { zoom: 1; overflow: hidden; }
+.ie8 .f-cb:after{
+  content: '.';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
 /* ****************************布局兼容**************************** */
 .lteie8 body,.g-doc { min-width: 960px; }
 .lteie8 .g-limit { width: 960px; margin: 0 auto; }
@@ -69,7 +79,7 @@
 /* 轮播图模块 */
 .lteie8 .m-banner { height: 460px; }
   /* .lteie8 .m-banner a { transform: translate(-50%,0); 需要做IE8兼容 } */
-  .lteie8 .m-banner a { margin-left: -50%; }
+  .lteie8 .m-banner a { margin-left: -826px; }
     .lteie8 .m-banner img { width: 1652px; height: 460px; }
   .lteie8 .m-banner .controls { bottom: 30px; }
     .lteie8 .m-banner li {
@@ -79,6 +89,7 @@
     }
 
 /* 产品模块 */
+.lteie8 .m-products .box:first-child { margin-right: 0; }
   .lteie8 .m-products article { margin-left: 95px; }
   .lteie8 .m-products article p,.lteie8 .m-products article a { font-size: 14px; }
   .lteie8 .m-products article h3 a { font-size: 22px; }
@@ -87,7 +98,7 @@
 /* 照片墙模块 */
 .lteie8 .m-gallery { height: 220px; }
   /* .lteie8 .m-gallery .container { transform: translate(-50%,0);  需要做IE8兼容} */
-    .lteie8 .m-gallery .container { margin-left: -50%; }
+    .lteie8 .m-gallery .container { margin-left: -806px; }
     .lteie8 .m-gallery img { width: 320px; }
 
 /* 视频介绍模块 */
@@ -95,9 +106,15 @@
 .lteie8 .m-org .content { padding: 20px; font-size: 14px; }
   .lteie8 .m-org .imgwrap { margin: 9px auto 0; }
     .lteie8 .m-org .play {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 42px;
+      height: 42px;
+      margin: auto;
       font-size: 42px;
-      /* transform: translate(-50%,-50%);  需要做IE8兼容 */
-      margin: -50% 0 0 -50%;
     }
 
 /* 热门排行模块 */
@@ -125,7 +142,7 @@
     margin: 0 0 10px 5px;
     font-size: 12px;
   }
-  .lteie8 .m-courses .poster { font-size: 10px; }
+  .lteie8 .m-courses .poster { font-size: 10px; margin-left: 0; }
   .lteie8 .m-courses .poster img { width: 223px; height: 124px; }
   .lteie8 .m-courses .count{
     padding: 0 3px;
@@ -145,7 +162,7 @@
     .lteie8 .m-courses .title,.lteie8 .m-courses .studys,.lteie8 .m-courses .post,.lteie8 .m-courses .category { margin-bottom: 12px; font-size: 12px; }
     .lteie8 .m-courses .title { font-size: 18px; }
   .lteie8 .m-courses .pop .describe {
-    padding: 40px 10pc 6px;
+    padding: 40px 10px 6px;
     font-size: 14px;
   }
 
@@ -157,6 +174,7 @@
 }
 
 /* 脚部 */
+.lteie8 .m-title-ft { line-height: 1; }
 /* 备案信息 */
 .lteie8 .m-record p { font-size: 12px; }
 
@@ -164,6 +182,9 @@
 .lteie8 .m-links h6 { font-size: 12px;}
 .lteie8 .m-links a { font-size: 14px; }
 
+/* 遮罩模块 */
+.lteie8 .m-mask { filter: alpha(opacity=80); }
+/* 登录弹窗模块 */
 .lteie8 .m-login {
   top: 0;
   right: 0;
@@ -203,7 +224,7 @@
   width: 950px;
   height: 610px;
   padding: 30px;
-  margin: auto auto;
+  margin: auto;
 }
 
   .lteie8 .m-video i {

@@ -41,7 +41,6 @@
 .f-fr { float: right; }
 .f-fl { float: left; }
 .f-cb { clear: both; }
-.lteie8 .f-cb { zoom: 1; }
 .f-cb::after{
   content: '.';
   display: block;
@@ -50,6 +49,7 @@
   visibility: hidden;
   overflow: hidden;
 }
+
 .f-shadow { box-shadow: 0 2px 2px #ccc; }
 
 
@@ -193,9 +193,9 @@
 
 /* 产品模块 */
 .m-products { display: flex; justify-content: space-between; }
-  .m-products .box { flex-basis: 35em; margin-right: 6.64%; }
+  .m-products .box { flex-basis: 35em; margin-left: 6.64%; }
   .lteie9 .m-products .box { float: left; width: 28.9%; }
-  .m-products .box:last-child { margin-right: 0; }
+  .m-products .box:first-child { margin-left: 0; }
     .m-products .logo {
       float: left;
       width: 80px;
