@@ -235,4 +235,4 @@ header,nav,section,article,main,aside,footer,audio,video,canvas,datalist,dialog,
     font-size: 16px;
   }
   .lteie8 .m-video div { margin-bottom: 20px; font-size: 18px; }
-  .lteie8 .m-video video { width: 100%; height: 510px; }
+  .lteie8 .m-video video { width: 100%; height: 510px; font-size: 14px; line-height: 25px; }
