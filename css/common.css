@@ -349,6 +349,7 @@
 .m-pages a {
   display: inline-block;
   width: 1.429em;
+  margin: 0 0 0 .715em;
   font-size: 1.4em;
   line-height: 1.429;
   text-align: center;
@@ -363,6 +364,7 @@
   background: #9dd8b1;
   color: #fff;
 }
+.m-pages a.prev { margin-left: 0; }
 
 
 /* 脚部 */

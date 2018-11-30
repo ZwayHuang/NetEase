@@ -72,7 +72,7 @@ header,nav,section,article,main,aside,footer,audio,video,canvas,datalist,dialog,
     border-radius: 17.6px;
     font-size: 16px;
   }
-  .lteie8 .m-search form input[type=submit] { width: 34px; font-size: 24px; }
+  .lteie8 .m-search form input[type=submit] { width: 34px; font-size: 24px; border-right: 1px solid #bfbfbf; }
 
 /* 轮播图模块 */
 .lteie8 .m-banner { height: 460px; }
@@ -167,11 +167,12 @@ header,nav,section,article,main,aside,footer,audio,video,canvas,datalist,dialog,
   }
 
 /* 分页器模块 */
-.lteie8 .m-pages a { width: 20px; font-size: 14px; }
+.lteie8 .m-pages a { width: 20px; margin: 0 0 0 10px; font-size: 14px; }
 .lteie8 .m-pages a.prev,.lteie8 .m-pages a.next {
   width: 42px;
   font-size: 28px;
 }
+.lteie8 .m-pages a.prev { margin-left: 0; }
 
 /* 脚部 */
 .lteie8 .m-title-ft { line-height: 1; }
