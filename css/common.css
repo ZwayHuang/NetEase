@@ -131,6 +131,7 @@
   .m-search form { position: relative; width: 16.8em; }
   .m-search form input[type=text] {
     width: 100%;
+    height: 2em;
     padding: 0 2.125em 0 1em;
     border: 1px solid #bfbfbf;
     border-radius: 1.1em;
@@ -210,7 +211,7 @@
     .m-products article h3 a{ font-size: 1em; }
     .m-products article a { display: inline; }
     .m-products article p {
-      margin: 1.071em 0  2.142em 0;
+      margin: 1.072em 0  2.143em 0;
       line-height: 1.714;
       color: #666;
     }
@@ -281,7 +282,7 @@
 
 
 /* tab模块 */
-.m-tabs { display: inline-block; font-size: 1rem;}
+.m-tabs { display: inline-block; }
   .m-tabs h3 { display: inline-block; text-align: center; }
     .m-tabs a { width: 9.1em; line-height: 2.273; color: #666; }
     .m-tabs a:hover { color: #39a030; }
@@ -408,15 +409,7 @@
   z-index: 101;
   transform: translate(-50.1%,-50.1%);
 }
-.lteie8 .m-login {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 39em;
-  height: 31.5em;
-  margin: auto auto;
-}
+
 .m-login.z-show { display: block; }
   .m-login .close {
     position: absolute;
@@ -435,6 +428,7 @@
     .m-login input,.m-login button{
       display: block;
       width: 18.375em;
+      height: 3em;
       line-height: 3;
       font-size: 1.6em;
     }
@@ -459,7 +453,7 @@
     }
 
 
-/* 初步弹窗模块 */
+/* 视频弹窗模块 */
 .m-video {
   position: fixed;
   top: 50%;

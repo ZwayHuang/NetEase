@@ -1,35 +1,14 @@
-body,.g-doc {
-  min-width: 96rem;
-}
-.g-limit {
-  /* width: 960px; */
-  width: 96rem;
-  margin: 0 auto;
-}
+body,.g-doc { min-width: 96rem; }
+.g-limit { width: 96rem; margin: 0 auto; }
 @media screen and (min-width:1205px){
-  .g-limit{
-    /* width: 1205px; */
-    width: 120.5rem;
-  }
+  .g-limit{ width: 120.5rem; }
 }
-.m-tip,
-.m-title,
-.m-follow,
-.m-nav,
-.m-search,
-.m-banner,
-.m-products,
-.m-gallery,
-.m-org,
-.m-hot,
-.m-tabs,
-.m-courses,
-.m-pages,
-.m-title-ft,
-.m-record,
-.m-links,
-.m-login,
-.m-video{
+.m-tip,     .m-title,   .m-follow,
+.m-nav,     .m-search,  .m-banner,
+.m-products,.m-gallery, .m-org,
+.m-hot,     .m-tabs,    .m-courses,
+.m-pages,   .m-title-ft,.m-record,
+.m-links,   .m-login,   .m-video {
   font-size: 1rem;
 }
 
