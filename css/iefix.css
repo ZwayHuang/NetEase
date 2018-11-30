@@ -1,3 +1,5 @@
+/* ****************************IE8兼容HTML5标签**************************** */
+header,nav,section,article,main,aside,footer,audio,video,canvas,datalist,dialog,figure,hgroup,mark,menu,meter,output,progress,time { display: block; }
 /* ****************************功能函数兼容**************************** */
 .lteie8 .f-cb { zoom: 1; overflow: hidden; }
 .ie8 .f-cb:after{
@@ -10,7 +12,7 @@
 }
 /* ****************************布局兼容**************************** */
 .lteie8 body,.g-doc { min-width: 960px; }
-.lteie8 .g-limit { width: 960px; margin: 0 auto; }
+.lteie8 .g-limit { min-width: 960px; max-width: 1205px; margin: 0 auto; }
 /* IE8不支持媒体查询 */
 /* @media screen and (min-width:1205px){
   .g-limit{ width: 1205px; }
@@ -233,4 +235,4 @@
     font-size: 16px;
   }
   .lteie8 .m-video div { margin-bottom: 20px; font-size: 18px; }
-  .lteie8 .m-video video { width: 890px; height: 510px; }
+  .lteie8 .m-video video { width: 100%; height: 510px; }

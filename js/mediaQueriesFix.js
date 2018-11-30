@@ -37,5 +37,4 @@
     }
   }
 
-  addEvent(document,"resize",setEleListWidth(limit));
 })()

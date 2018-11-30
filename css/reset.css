@@ -133,6 +133,3 @@ html {
 *::after {
   box-sizing: border-box;
 }
-
-/* 兼容IE8 */
-header,nav,section,article,main,aside,footer,audio,video,canvas,datalist,dialog,figure,hgroup,mark,menu,meter,output,progress,time { display: block; }
