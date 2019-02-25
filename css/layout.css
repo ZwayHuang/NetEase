@@ -7,7 +7,7 @@ body,.g-doc { min-width: 96rem; }
 .m-nav,     .m-search,  .m-banner,
 .m-products,.m-gallery, .m-org,
 .m-hot,     .m-tabs,    .m-courses,
-.m-pages,   .m-title-ft,.m-record,
+.m-pager,   .m-title-ft,.m-record,
 .m-links,   .m-login,   .m-video {
   font-size: 1rem;
 }
@@ -30,7 +30,7 @@ body,.g-doc { min-width: 96rem; }
     .m-org { margin-bottom: 2em; }
   .g-main { margin: 0 24rem 0 0; height: 100%; }
     .m-courses { margin: 3em -1.5em 3em 0; }
-    .m-pages {
+    .m-pager {
       position: absolute;
       right: 24rem;
       bottom: 0;

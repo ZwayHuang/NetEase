@@ -29,7 +29,7 @@ header,nav,section,article,main,aside,footer,audio,video,canvas,datalist,dialog,
     .lteie8 .m-org { margin-bottom: 20px; }
   .lteie8 .g-main { margin: 0 240px 0 0; }
     .lteie8 .m-courses { margin: 30px -15px 30px 0; }
-    .lteie8 .m-pages   { right: 240px; }
+    .lteie8 .m-pager   { right: 240px; }
 
 .lteie8 .g-fthead { margin: 90px 0 80px 50px; }
   .lteie8 .m-record { margin: 28px 0 0 0; }
@@ -77,7 +77,8 @@ header,nav,section,article,main,aside,footer,audio,video,canvas,datalist,dialog,
 /* 轮播图模块 */
 .lteie8 .m-banner { height: 460px; }
   /* .lteie8 .m-banner a { transform: translate(-50%,0); 需要做IE8兼容 } */
-  .lteie8 .m-banner a { margin-left: -826px; }
+  .lteie8 .m-banner .slider { margin-left: -826px; visibility: hidden; }
+  .lteie8 .m-banner .slider.show { visibility: visible; }
     .lteie8 .m-banner img { width: 1652px; height: 460px; }
   .lteie8 .m-banner .controls { bottom: 30px; }
     .lteie8 .m-banner li {
@@ -167,12 +168,12 @@ header,nav,section,article,main,aside,footer,audio,video,canvas,datalist,dialog,
   }
 
 /* 分页器模块 */
-.lteie8 .m-pages a { width: 20px; margin: 0 0 0 10px; font-size: 14px; }
-.lteie8 .m-pages a.prev,.lteie8 .m-pages a.next {
+.lteie8 .m-pager a { width: 20px; margin: 0 0 0 10px; font-size: 14px; }
+.lteie8 .m-pager a.prev,.lteie8 .m-pager a.next {
   width: 42px;
   font-size: 28px;
 }
-.lteie8 .m-pages a.prev { margin-left: 0; }
+.lteie8 .m-pager a.prev { margin-left: 0; }
 
 /* 脚部 */
 .lteie8 .m-title-ft { line-height: 1; }

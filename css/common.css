@@ -160,16 +160,16 @@
   height: 46em;
   overflow: hidden;
 }
-  .m-banner a {
+  .m-banner .slider {
     position: absolute;
     top: 0;
     left: 50%;
     opacity: 0;
     z-index: 0;
     transform: translate(-50%,0); /* 需要做IE8兼容 */
-    transition: opacity .5s ease;
+    transition: opacity 1s ease-in-out;
   }
-  .m-banner a.z-current { opacity: 1; z-index: 1; }
+  .m-banner .slider.z-show { opacity: 1; z-index: 1; }
     .m-banner img { width: 165.2em; height: 46em; }
 
   .m-banner .controls {
@@ -234,7 +234,7 @@
     .m-gallery img {
       display: inline-block;
       width: 32em;
-      height: 100%;
+      height: 22em;
     }
 
 
@@ -346,7 +346,7 @@
 
 
 /* 分页器模块 */
-.m-pages a {
+.m-pager li {
   display: inline-block;
   width: 1.429em;
   margin: 0 0 0 .715em;
@@ -355,16 +355,17 @@
   text-align: center;
   vertical-align: middle;
 }
-.m-pages a:hover { color: #fff; background: #9dd8b1; }
-.m-pages a.z-crt { color: #39a030; }
-.m-pages a.prev,.m-pages a.next {
+.m-pager li:hover { background: #9dd8b1; }
+.m-pager li:hover a { color: #fff; }
+.m-pager li.z-crt a { color: #39a030; }
+.m-pager li.prev,.m-pager li.next {
   width: 1.5em;
   line-height: 1;
   font-size: 2em;
   background: #9dd8b1;
-  color: #fff;
 }
-.m-pages a.prev { margin-left: 0; }
+.m-pager li.prev a,.m-pager li.next a { color: #fff; }
+.m-pager li.prev { margin-left: 0; }
 
 
 /* 脚部 */

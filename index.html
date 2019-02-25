@@ -22,16 +22,17 @@
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <!--[if (lte IE 8)]><link rel="stylesheet" href="./css/iefix.css"><![endif]-->
   <!--[if (lte IE 8)]><script src="./js/html5Compatible.js"></script><![endif]-->
+  <script src="./js/poilfill.js"></script>
 </head>
 <body>
 <div class="g-doc f-bgray-1">
   <!-- 顶部提示条 -->
   <div class="f-bgray">
-    <div class="g-limit">
-      <div class="m-tip f-cb">
+    <div class="g-limit" id="j-tip_wrap">
+      <!-- <div class="m-tip f-cb">
         <p class="msg">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！<a class="u-link" href="http://study.163.com/">立即查看&gt;</a></p>
         <a class="cls" href="#"><i class="u-icon">&#xe606;</i>不再提醒</a>
-      </div>
+      </div> -->
     </div>
   </div>
   <!-- 头部 -->
@@ -40,11 +41,12 @@
       <!-- 标题模块 -->
       <h1 class="m-title"><a href="http://study.163.com/"><em class="logo f-cgreen">EDU</em><i class="f-cgreen">I</i><em class="txt">网易教育产品部</em></a></h1>
       <!-- 关注模块 -->
-      <div class="m-follow">
+      <!-- <div class="m-follow">
         <a class="follow z-active f-shadow" href="#">+ 关注</a>
         <div class="cancel"><i class="hook u-icon">&#xe733;</i>已关注<i class="line">I</i><a class="u-link" href="#">取消</a></div>
         <div class="fans">粉丝 45</div>
-      </div>
+      </div> -->
+      <div class="followWrap" id="j-follow_wrap"></div>
       <!-- 搜索模块 -->
       <div class="m-search">
         <i class="icon u-icon">&#xe615;</i><form name="search_form" action="https://study.163.com/courses-search" type="hiden" method="GET" enctype="application/x-www-form-urlencoded"><input name="keyword"  type="text" placeholder="输入课程名称" autocomplete="off" /><input class="u-icon" type="submit" value="&#xe615;" /></form>
@@ -56,12 +58,13 @@
     </header>
   </div>
   <!-- 轮播图 -->
-  <div class="m-banner">
+  <!-- <div class="m-banner">
     <a href="http://study.163.com/"><img src="./images/banner1.jpg" alt="知识改变世界" width="1652" height="460" /></a>
     <a class="z-current" href="http://study.163.com/"><img src="./images/banner2.jpg" alt="教育改变未来" width="1652" height="460" /></a>
     <a href="http://study.163.com/"><img src="./images/banner3.jpg" alt="遇见更好的自己" width="1652" height="460" /></a>
     <ul class="controls"><li class="first"></li><li class="z-current"></li><li></li></ul>
-  </div>
+  </div> -->
+  <div class="banner_wrap" id="j-banner_wrap"></div>
   <!-- 产品展示 -->
   <div class="g-limit">
     <div class="m-products f-cb">
@@ -332,15 +335,19 @@
         </ul>
       </div>
       <!-- 分页器模块 -->
-      <div class="m-pages">
-        <a class="prev" href="#">&lt;</a>
-        <a class="z-crt" href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">6</a>
-        <a class="next" href="#">&gt;</a>
+      <div class="j-pagerWrap">
+        <!-- <ul class="m-pager">
+          <li class="prev"><a href="javascript:void(0)">&lt;</a></li>
+          <li class="page"><a href="?page=1">1</a></li>
+          <li class="page"><span>...</span></li>
+          <li class="page z-crt"><a href="?page=3">3</a></li>
+          <li class="page"><a href="?page=4">4</a></li>
+          <li class="page"><a href="?page=5">5</a></li>
+          <li class="page"><a href="?page=6">6</a></li>
+          <li class="page"><span>...</span></li>
+          <li class="page"><a href="?page=8">8</a></li>
+          <li class="next"><a href="javascript:void(0)">&gt;</a></li>
+        </ul> -->
       </div>
     </div>
   </div>
@@ -394,7 +401,7 @@
   <div class="m-video">
     <i class="u-icon close">&#xe606;</i>
     <div>请观看下面视频：</div>
-    <video controls="controls" dowoload="no" width="100%" height="510">
+    <video controls="controls" download="no" width="100%" height="510">
       您的浏览器不支持video标签，请升级您的浏览器以获得更好的浏览体验！
       <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" type="video/mp4" />
       <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.webm" type="video/webm" />
@@ -407,5 +414,11 @@
     </video>
   </div>
 </div>
+<script src="./js/util.js"></script>
+<script src="./js/tip.js"></script>
+<script src="./js/follow.js"></script>
+<script src="./js/banner.js"></script>
+<script src="./js/pager.js"></script>
+<script src="./js/shell.js"></script>
 </body>
 </html>
