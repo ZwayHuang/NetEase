@@ -1,180 +1,201 @@
-var util = (function(){
+const util = (function() {
   return {
     // 去除字符串的首尾空格和中间一个以上空格
-    delExcessSpace: function(str){
+    delExcessSpace(str) {
       // 去除中间多余空格
-      var result = str.replace(/[\s\uFFFF\xA0]{2,}/g,' ');
+      const result = str.replace(/[\s\uFFFF\xA0]{2,}/g, ' ');
       // 去除首尾多余空格
       return result.trim();
     },
-    addClass: function (node, className){
-      var current = node.className || "";
-      if ((" " + current + " ").indexOf(" " + className + " ") === -1) {
-        node.className = current? ( current + " " + className ) : className;
+
+    addClass(node, className) {
+      const current = node.className || '';
+      if ((' ' + current + ' ').indexOf(' ' + className + ' ') === -1) {
+        node.className = current? ( current + ' ' + className ) : className;
       }
     },
-    delClass: function (node, className){
-      var current = node.className || "";
-      node.className = (" " + current + " ").replace(" " + className + " ", " ").trim();
+
+    delClass(node, className) {
+      const current = node.className || '';
+      node.className = (' ' + current + ' ')
+          .replace(' ' + className + ' ', ' ').trim();
     },
-    hasClass: function (node,className){
-      var current = node.className || "";
-      if ((" " + current + " ").indexOf(" " + className + " ") === -1){
+
+    hasClass(node, className) {
+      const current = node.className || '';
+      if ((' ' + current + ' ').indexOf(' ' + className + ' ') === -1) {
         return false;
       }
       return true;
     },
-    toggleClass: function(node,className){
-      if (this.hasClass(node,className)){
-        this.delClass(node,className);
-      }else{
-        this.addClass(node,className);
+
+    toggleClass(node, className) {
+      if (this.hasClass(node, className)) {
+        this.delClass(node, className);
+      } else {
+        this.addClass(node, className);
       }
     },
-    ajax: function(sMethod,sURL,vContent,bAsync,onSucc,onFail){
-      let xhr = new XMLHttpRequest();
-      xhr.open(sMethod,sURL,bAsync);
-      xhr.onreadystatechange = function(){
-        if (xhr.readyState === 4){
-          if (xhr.status === 200){
+
+    ajax(method, URL, content, async, onSucc, onFail) {
+      const xhr = new XMLHttpRequest();
+      xhr.open(method, URL, async);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
             onSucc(xhr.responseText);
-          }else{
+          } else {
             onFail(xhr.status);
           }
         }
       };
       xhr.send(vContent);
     },
-    
-    getDataSet(element){
-      if (element.dataset){
+
+    getDataSet(element) {
+      if (element.dataset) {
         return element.dataset;
       }
 
-      var dataSet = {};
-      var attrs = element.Attributes;
-      var attrName = '';
-      for (var i = 0, len = attrs.length; i < len; i++ ){
-        if (attrs[i].nodeName.indexOf('data-') === -1){
+      const dataSet = {};
+      const attrs = element.Attributes;
+      const attrName = '';
+
+      for (let i = 0, len = attrs.length; i < len; i++ ) {
+        if (attrs[i].nodeName.indexOf('data-') === -1) {
           continue;
         }
         attrName = attrs[i].nodeName.slice(5);
-        attrName.replace('-',function(match,index,input){
+        attrName.replace('-', function(match, index, input) {
           return input[index+1].toUpperCase();
         });
         dataSet[attrName] = nodeValue;
       }
-      
       return dataSet;
-      
     },
-    getStyle: function (oElement, sCssPropertyName){
-      var formatName = function(value){ 
-        if(/\-/.test(value)){
-          value = value.replace(/\-\w/,function(match,index,input){
+
+    getStyle(element, cssPropertyName) {
+      const formatName = function(value) {
+        if (/\-/.test(value)) {
+          value = value.replace(/\-\w/, function(match, index, input) {
             return input.charAt(index + 1).toUpperCase();
           });
         }
         return value;
       };
-      var key = formatName(sCssPropertyName);
-      if(window.getComputedStyle){
-        return window.getComputedStyle(oElement)[key];
-      } else{
-        return oElement.currentStyle[key];
+      const key = formatName(cssPropertyName);
+      if (window.getComputedStyle) {
+        return window.getComputedStyle(element)[key];
+      } else {
+        return element.currentStyle[key];
       }
     },
-    extend: function(o1,o2){
-      for (i in o2){
-        if (o1[i] == undefined){
-          o1[i] = o2[i];
+
+    extend(o1, o2) {
+      for (let key in o2) {
+        if (o1[key] == undefined) {
+          o1[key] = o2[key];
         }
       }
     },
+
     // 模板编译函数
-    compile:function(template,data){
+    compile(template, data) {
       // 匹配表达式
       const evalExpr = /<%=(.+?)%>/g;
       // 匹配语句
       const expr = /<%([\s\S]+?)%>/g;
-    
+
       // 把模板替换成函数
-      template = template.replace(evalExpr,'`); \n echo($1); \n echo(`').replace(expr,'`); \n $1 \n echo(`');
+      template = template.replace(evalExpr, '`); \n echo($1); \n echo(`')
+          .replace(expr, '`); \n $1 \n echo(`');
       template = 'echo(`'+template+'`);';
+
+      const parse = eval(
+          `(function(data){
+            let output = '';
+          
+            function echo(html){
+              output += html;
+            }
       
-      let parse = eval(
-        `(function(data){
-          let output = '';
-        
-          function echo(html){
-            output += html;
-          }
-    
-          ${template}
-    
-          return output;
-        })`);
-    
+            ${template}
+      
+            return output;
+          })`);
+
       return parse(data);
     },
 
-   /**
+    // HTML字符串转换函数
+    html2node(htmlStr) {
+      const div = document.createElement('div');
+      div.innerHTML = htmlStr;
+      return div.children[0];
+    },
+
+    /**
     * ::事件系统::
-    * 
+    *
     * 语法：
-    * 
     * emitter.on(event,fn)
     * emitter.off(event,fn)
     * emitter.emit(event)
     */
     emitter: {
-      //注册事件
-      on: function(event,fn){
-        let handles = this._handles  || (this._handles  = {}),
-            calls   = handles[event] || (handles[event] = []);
-        
+      // 注册事件
+      on(event, fn) {
+        const handles = this._handles || (this._handles = {});
+        const calls = handles[event] || (handles[event] = []);
         calls.push(fn);
-    
         return this;
       },
-    
-      //解绑事件
-      off: function(event,fn){
-        if (!event || !this._handles){ this._handles = {}; }
-        if (!this._handles){ return this; }
-    
-        let handles = this._handles, calls;
-    
-        if (calls = handles[event]){
-          if(!fn){
+
+      // 解绑事件
+      off(event, fn) {
+        if (!event || !this._handles) {
+          this._handles = {};
+        }
+        if (!this._handles) {
+          return this;
+        }
+
+        const handles = this._handles;
+        const calls = handles[event];
+
+        if (calls) {
+          if (!fn) {
             handles[event] = [];
             return this;
           }
-          for (let i = 0,len = calls.length; i < len; i++){
-            if (fn===calls[i]){
-              calls.splice(i,1);
+          for (let i = 0, len = calls.length; i < len; i++) {
+            if (fn===calls[i]) {
+              calls.splice(i, 1);
               return this;
             }
           }
         }
         return this;
       },
-    
-      //发布事件
-      emit: function(event){
-        let args = Array.prototype.slice.call(arguments,1)
-        let handles = this._handles,calls;
-    
-        if (!handles || !(calls = handles[event])){ return this; }
-    
-        for (let i = 0,len = calls.length; i < len; i++){
-          calls[i].apply(this,args)
+
+      // 发布事件
+      emit(...args) {
+        const event = Array.prototype.shift.call(args);
+        const handles = this._handles || {};
+        const calls = handles[event];
+
+        if (!handles || !calls) {
+          return this;
+        }
+
+        for (let i = 0, len = calls.length; i < len; i++) {
+          calls[i].apply(this, args);
         }
         return this;
-      }
+      },
     },
 
-   /**
+    /**
     *
     *  :: cookies.js ::
     *
@@ -182,7 +203,8 @@ var util = (function(){
     *
     *  https://developer.mozilla.org/en-US/docs/DOM/document.cookie
     *
-    *  This framework is released under the GNU Public License, version 3 or later.
+    *  This framework is released under the GNU Public License,
+    *  version 3 or later.
     *  http://www.gnu.org/licenses/gpl-3.0-standalone.html
     *
     *  Syntaxes:
@@ -197,55 +219,76 @@ var util = (function(){
 
     docCookies: {
 
-      getItem: function (sKey) {
-        return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[-.+*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+      getItem(key) {
+        return decodeURIComponent(document.cookie.replace(new RegExp('(?:(?:^|.*;)\\s*' + encodeURIComponent(key).replace(/[-.+*]/g, '\\$&') + '\\s*\\=\\s*([^;]*).*$)|^.*$'), '$1')) || null;
       },
 
-      setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
-        if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false; }
-        var sExpires = "";
-        if (vEnd) {
-          switch (vEnd.constructor) {
+      setItem(key, value, end, path, domain, secure) {
+        if (!key || /^(?:expires|max\-age|path|domain|secure)$/i.test(key)) {
+          return false;
+        }
+        let sExpires = '';
+        if (end) {
+          switch (end.constructor) {
             case Number:
-              sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+              sExpires = end === Infinity
+                          ? '; expires=Fri, 31 Dec 9999 23:59:59 GMT'
+                          : '; max-age=' + end;
               break;
             case String:
-              sExpires = "; expires=" + vEnd;
+              sExpires = '; expires=' + end;
               break;
             case Date:
-              sExpires = "; expires=" + vEnd.toUTCString();
+              sExpires = '; expires=' + end.toUTCString();
               break;
           }
         }
-        document.cookie = encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+        document.cookie = encodeURIComponent(key)
+            + '=' + encodeURIComponent(value)
+            + sExpires
+            + (domain ? '; domain=' + domain : '')
+            + (path ? '; path=' + path : '')
+            + (secure ? '; secure' : '');
         return true;
       },
 
-      removeItem: function (sKey, sPath, sDomain) {
-        if (!sKey || !this.hasItem(sKey)) { return false; }
-        document.cookie = encodeURIComponent(sKey) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + ( sDomain ? "; domain=" + sDomain : "") + ( sPath ? "; path=" + sPath : "");
+      removeItem(key, path, domain) {
+        if (!key || !this.hasItem(key)) {
+          return false;
+        }
+        document.cookie = encodeURIComponent(key)
+          + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT'
+          + ( domain ? '; domain=' + domain : '')
+          + ( path ? '; path=' + path : '');
         return true;
       },
-      
-      hasItem: function (sKey) {
-        return (new RegExp("(?:^|;\\s*)" + encodeURIComponent(sKey).replace(/[-.+*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+
+      /**
+       * 检测是否包含指定的cookie
+       * @param {string} key
+       * @return {boolean}
+       */
+      hasItem(key) {
+        const reg = new RegExp('(?:^|;\\s*)'
+            + encodeURIComponent(key)
+                .replace(/[-.+*]/g, '\\$&') + '\\s*\\=');
+        const result = reg.test(document.cookie);
+        return result;
       },
 
       /**
        * 列出所有cookie的键
-       * @returns {Array}
+       * @return {Array}
        */
-      keys: /* optional method: you can safely remove it! */ function () {
-        var aKeys = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
-        for (var nIdx = 0; nIdx < aKeys.length; nIdx++) { aKeys[nIdx] = decodeURIComponent(aKeys[nIdx]); }
-        return aKeys;
-      }
+      keys() {
+        const keys = document.cookie
+            .replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, '')
+            .split(/\s*(?:\=[^;]*)?;\s*/);
+        for (let nIdx = 0; nIdx < keys.length; nIdx++) {
+          keys[nIdx] = decodeURIComponent(keys[nIdx]);
+        }
+        return keys;
+      },
     },
-
-  }
+  };
 })();
-
-
-
-
-

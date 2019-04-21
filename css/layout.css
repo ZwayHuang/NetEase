@@ -1,45 +1,82 @@
-body,.g-doc { min-width: 96rem; }
-.g-limit { width: 96rem; margin: 0 auto; }
-@media screen and (min-width:1205px){
-  .g-limit{ width: 120.5rem; }
+body,
+.g-doc { min-width: 96rem; }
+
+.g-limit {
+  width: 96rem;
+  margin: 0 auto;
 }
-.m-tip,     .m-title,   .m-follow,
-.m-nav,     .m-search,  .m-banner,
-.m-products,.m-gallery, .m-org,
-.m-hot,     .m-tabs,    .m-courses,
-.m-pager,   .m-title-ft,.m-record,
-.m-links,   .m-login,   .m-video {
+
+@media screen and (min-width: 1205px) {
+  .g-limit { width: 120.5rem; }
+}
+.g-hd { height: 8.8rem; }
+.g-bd { margin: 8rem 0 12rem 0; }
+
+.g-side {
+  float: right;
+  width: 22.5rem;
+  margin: 0 0 5rem 0;
+}
+
+.g-main {
+  margin: 0 24rem 0 0;
+  height: 100%;
+}
+
+.m-tip,
+.m-title,
+.m-follow,
+.m-nav,
+.m-search,
+.m-banner,
+.m-product,
+.m-gallery,
+.m-side,
+.m-intro,
+.m-hotlist,
+/* .m-hot, */
+/* .m-tabs, */
+/* .m-courses, */
+.m-list,
+.m-pager,
+.m-title-ft,
+.m-record,
+.m-link,
+.m-login,
+.m-video {
   font-size: 1rem;
 }
 
-.g-hd { height: 8.8rem; }
-  .m-title,.m-follow,.m-nav,.m-search { line-height: 8.8rem; }
-  .m-title,.m-follow { float: left; }
-  .m-nav,.m-search   { float: right; }
-  .m-follow   { margin: 0 0 0 3em; }
-  .m-nav      { margin: 0 6.6em 0 0; }
-  .m-search   { position: absolute; top: 0; right: 1.4em; }
-  .m-products { margin: 6em 0; }
+.m-title,
+.m-follow,
+.m-nav { line-height: 8.8rem; }
 
-.g-bd { margin: 8rem 0 12rem 0; }
-  .g-side {
-    float: right;
-    width: 22.5rem;
-    margin: 0 0 5rem 0;
-  }
-    .m-org { margin-bottom: 2em; }
-  .g-main { margin: 0 24rem 0 0; height: 100%; }
-    .m-courses { margin: 3em -1.5em 3em 0; }
-    .m-pager {
-      position: absolute;
-      right: 24rem;
-      bottom: 0;
-    }
+.m-title,
+.m-follow { float: left; }
+
+.m-nav,
+.m-search { float: right; }
+
+.m-follow { margin: 0 0 0 3em; }
+
+.m-product { margin: 6em 0; }
+
+.m-side { margin-bottom: 2em; }
+
+.m-pager {
+  position: absolute;
+  right: 24rem;
+  bottom: 0;
+}
 
 .g-fthead { margin: 9rem 0 8rem 5rem; }
-  .m-title-ft { float: none; line-height: 1; }
-  .m-record { margin: 2.8em 0 0 0; }
-  .m-links  { margin: 8em 0 0 0; }
-  .m-links.friend { margin-left: 14.5em; }
-  .m-links.about  { margin-left: 9em; }
-  .m-links.more   { margin-left: 6.5em; }
+
+.m-title-ft {
+  float: none;
+  line-height: 1;
+}
+.m-record { margin: 2.8em 0 0 0; }
+.m-link { margin: 8em 0 0 0; }
+.m-link.friend { margin-left: 14.5em; }
+.m-link.about { margin-left: 9em; }
+.m-link.more { margin-left: 6.5em; }

@@ -1,3 +1,4 @@
+/*
 let tipWrap = document.getElementById('j-tip_wrap');
 
 // // 如果存在Tip_visible这个cookie则不渲染Tip模块
@@ -61,6 +62,10 @@ let page = new Pager({
 });
 
 // util.ajax('GET','http://study.163.com/webDev/couresByCategory.htm');
-
-
-
+*/
+(function() {
+  const tip = new Tip({el: '#j-tipwrap'});
+  tip.show('网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！');
+  tip.on('detail', () => window.location = 'https://study.163.com/');
+  tip.on('close', () => tip.hide());
+})();

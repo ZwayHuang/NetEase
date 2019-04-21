@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="ie ie8 lteie8 lteie9" lang="zh-cmn-Hans"><![endif]-->
-<!--[if IE 9]><html class="ie ie9 lteie9" lang="zh-cmn-Hans"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lteie8 lteie9" lang="cmn-Hans"><![endif]-->
+<!--[if IE 9]><html class="ie ie9 lteie9" lang="cmn-Hans"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="zh-cmn-Hans">  
+<html lang="cmn-Hans">  
 <!--<![endif]-->
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> -->
   <title>网易教育产品部-专注打造线上教育品牌</title>
   <meta name="keywords" content="优质课程、智能问答、趣味实践、随心笔记、教育、网易公开课、网易云课堂、中国大学MOOC、产品设计、编程语言、计算机开发、交互视觉设计、视频教程、交流互动、免费、名师、实用、培训">
   <meta name="description" content="教育产品部是网易公司用于展示的一款在线教育产品交流平台，该平台面向来访者提供海量免费、优质课程案例，创新的个性化参观体验，自由开放的交流互动环境。">
   <meta name="author" content="zwey,cn.huangzhiwei@gmail.com">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="index,follow">
   <link rel="stylesheet" href="./css/reset.css">
@@ -22,16 +21,17 @@
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <!--[if (lte IE 8)]><link rel="stylesheet" href="./css/iefix.css"><![endif]-->
   <!--[if (lte IE 8)]><script src="./js/html5Compatible.js"></script><![endif]-->
-  <script src="./js/poilfill.js"></script>
+  <script src="./js/polyfill.js"></script>
 </head>
 <body>
 <div class="g-doc f-bgray-1">
   <!-- 顶部提示条 -->
   <div class="f-bgray">
-    <div class="g-limit" id="j-tip_wrap">
-      <!-- <div class="m-tip f-cb">
-        <p class="msg">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！<a class="u-link" href="http://study.163.com/">立即查看&gt;</a></p>
-        <a class="cls" href="#"><i class="u-icon">&#xe606;</i>不再提醒</a>
+    <div class="g-limit" id="j-tipwrap">
+      <!-- <div class="m-tip z-show f-cb">
+        <p class="tip_msg">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！</p>
+        <a class="tip_detail u-link" href="http://study.163.com/">立即查看&gt;</a>
+        <a class="tip_close u-icon">&#xe606;不再提醒</a>
       </div> -->
     </div>
   </div>
@@ -39,55 +39,56 @@
   <div class="g-limit">
     <header class="g-hd f-cb f-pr">
       <!-- 标题模块 -->
-      <h1 class="m-title"><a href="http://study.163.com/"><em class="logo f-cgreen">EDU</em><i class="f-cgreen">I</i><em class="txt">网易教育产品部</em></a></h1>
+      <h1 class="m-title"><a href="http://study.163.com/"><em class="title_logo f-cgreen">EDU</em><i class="title_line f-cgreen">I</i><em class="title_txt">网易教育产品部</em></a></h1>
       <!-- 关注模块 -->
-      <!-- <div class="m-follow">
-        <a class="follow z-active f-shadow" href="#">+ 关注</a>
-        <div class="cancel"><i class="hook u-icon">&#xe733;</i>已关注<i class="line">I</i><a class="u-link" href="#">取消</a></div>
-        <div class="fans">粉丝 45</div>
-      </div> -->
-      <div class="followWrap" id="j-follow_wrap"></div>
-      <!-- 搜索模块 -->
-      <div class="m-search">
-        <i class="icon u-icon">&#xe615;</i><form name="search_form" action="https://study.163.com/courses-search" type="hiden" method="GET" enctype="application/x-www-form-urlencoded"><input name="keyword"  type="text" placeholder="输入课程名称" autocomplete="off" /><input class="u-icon" type="submit" value="&#xe615;" /></form>
+      <div class="follow_wrap" id="j-follow_wrap">
+        <div class="m-follow">
+          <a class="follow_subscribe z-active f-shadow" href="#">+ 关注</a>
+          <div class="follow_cancel"><i class="cancel_hook u-icon">&#xe733;</i>已关注<i class="cancel_line">I</i><a class="cancel_btn u-link" href="#">取消</a></div>
+          <div class="follow_fans">粉丝 45</div>
+        </div>
       </div>
       <!-- 导航条模块 -->
       <ul class="m-nav">
-        <li><a class="item" href="http://open.163.com/">网易公开课</a></li><li><a class="item" href="http://study.163.com/">云课堂</a></li><li><a class="item" href="http://www.icourse163.org/">中国大学MOOC</a></li>
+        <li><a class="nav_link" href="http://open.163.com/">网易公开课</a></li>
+        <li><a class="nav_link" href="http://study.163.com/">云课堂</a></li>
+        <li><a class="nav_link" href="http://www.icourse163.org/">中国大学MOOC</a></li>
+        <li><a class="nav_link nav_icon u-icon" href="http://www.study.163.com/">&#xe615;</a></li>
       </ul>
     </header>
   </div>
   <!-- 轮播图 -->
-  <!-- <div class="m-banner">
-    <a href="http://study.163.com/"><img src="./images/banner1.jpg" alt="知识改变世界" width="1652" height="460" /></a>
-    <a class="z-current" href="http://study.163.com/"><img src="./images/banner2.jpg" alt="教育改变未来" width="1652" height="460" /></a>
-    <a href="http://study.163.com/"><img src="./images/banner3.jpg" alt="遇见更好的自己" width="1652" height="460" /></a>
-    <ul class="controls"><li class="first"></li><li class="z-current"></li><li></li></ul>
-  </div> -->
-  <div class="banner_wrap" id="j-banner_wrap"></div>
+  <div class="banner_wrap" id="j-banner_wrap">
+    <div class="m-banner">
+      <div class="banner_slider"><img src="./images/banner1.jpg" alt="知识改变世界" width="1652" height="460" /></div>
+      <div class="banner_slider z-current"><img src="./images/banner2.jpg" alt="教育改变未来" width="1652" height="460" /></div>
+      <div class="banner_slider"><img src="./images/banner3.jpg" alt="遇见更好的自己" width="1652" height="460" /></div>
+      <ul class="banner_cursor"><li></li><li class="z-current"></li><li></li></ul>
+    </div>
+  </div>
   <!-- 产品展示 -->
   <div class="g-limit">
-    <div class="m-products f-cb">
-      <div class="box">
-        <a class="logo gkk" href="https://open.163.com/"></a>
-        <article>
-          <h3><a href="https://open.163.com/">网易公开课</a></h3>
+    <div class="m-product f-cb">
+      <div class="product_box">
+        <a class="box_logo gkk" href="https://open.163.com/"></a>
+        <article class="box_main">
+          <h2><a href="https://open.163.com/">网易公开课</a></h2>
           <p class="f-tf">推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深入剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
           <a class="u-link" href="http://open.163.com/">了解更多&gt;</a>
         </article>
       </div>
-      <div class="box">
-        <a class="logo ykt" href="https://study.163.com/"></a>
-        <article>
-          <h3><a href="https://study.163.com/">云课堂</a></h3>
+      <div class="product_box">
+        <a class="box_logo ykt" href="https://study.163.com/"></a>
+        <article class="box_main">
+          <h2><a href="https://study.163.com/">云课堂</a></h2>
           <p class="f-tf">网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。</p>
           <a class="u-link" href="http://study.163.com/">了解更多&gt;</a>
         </article>
       </div>
-      <div class="box">
-        <a class="logo mooc" href="http://www.icourse163.org/"></a>
-        <article>
-          <h3><a href="http://www.icourse163.org/">中国大学MOOC</a></h3>
+      <div class="product_box">
+        <a class="box_logo mooc" href="http://www.icourse163.org/"></a>
+        <article class="box_main">
+          <h2><a href="http://www.icourse163.org/">中国大学MOOC</a></h2>
           <p class="f-tf">是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
           <a class="u-link" href="http://www.icourse163.org/">了解更多&gt;</a>
         </article>
@@ -97,7 +98,7 @@
   </div>
   <!-- 工作环境 -->
   <div class="m-gallery">
-    <div class="container">
+    <div class="gallery_container">
       <img src="./images/environment1.jpg" alt="工作环境" width="320" height="220" />
       <img src="./images/environment2.jpg" alt="工作环境" width="320" height="220" />
       <img src="./images/environment3.jpg" alt="工作环境" width="320" height="220" />
@@ -111,62 +112,35 @@
     <div class="g-limit f-cb f-pr">
       <div class="g-side">
         <!-- 机构介绍模块 -->
-        <div class="m-org f-shadow">
-          <h4>机构介绍</h4>
-          <div class="content">
-            观看下面的视频来了解吧
-            <div class="imgwrap">
+        <div class="m-side f-shadow">
+          <h4 class="side_title">机构介绍</h4>
+          <div class="side_content m-intro">
+            <p class="intro_txt">观看下面的视频来了解吧</p>
+            <div class="intro_poster">
               <img src="./images/videolink.jpg" alt="机构介绍视频封面" width="180" height="110" />
-              <a class="u-icon play" href="#">&#xe607;</a>
+              <a class="u-icon poster_play_btn" href="#">&#xe607;</a>
             </div>
           </div>
         </div>
         <!-- 最热排行模块 -->
-        <div class="m-hot f-shadow">
-          <h4>最热排行</h4>
-          <ul class="content">
-            <li>
+        <div class="m-side f-shadow">
+          <h4 class="side_title">最热排行</h4>
+          <ul class="side_content m-hotlist">
+            <li class="hotlist_item">
               <a class="f-cb" href="#">
                 <img src="./images/course_small1.jpg" alt="课程图标" width="50" height="50" />
-                <div class="txt">
+                <div class="item_info">
                   <div>photoshop公开课</div>
-                  <div><i class="u-icon">&#xe604;</i> 25741</div>
+                  <div><i class="u-icon u-people">&#xe604;</i><span>25741</span></div>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="hotlist_item">
               <a class="f-cb" href="#">
                 <img src="./images/course_small2.jpg" alt="课程图标" width="50" height="50" />
-                <div class="txt">
+                <div class="item_info">
                   <div>photoshop公开课</div>
-                  <div><i class="u-icon">&#xe604;</i> 25741</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="f-cb" href="#">
-                <img src="./images/course_small3.jpg" alt="课程图标" width="50" height="50" />
-                <div class="txt">
-                  <div>photoshop公开课</div>
-                  <div><i class="u-icon">&#xe604;</i> 25741</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="f-cb" href="#">
-                <img src="./images/course_small4.jpg" alt="课程图标" width="50" height="50" />
-                <div class="txt">
-                  <div>photoshop公开课</div>
-                  <div><i class="u-icon">&#xe604;</i> 25741</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="f-cb" href="#">
-                <img src="./images/course_small5.jpg" alt="课程图标" width="50" height="50" />
-                <div class="txt">
-                  <div>photoshop公开课</div>
-                  <div><i class="u-icon">&#xe604;</i> 25741</div>
+                  <div><i class="u-icon u-people">&#xe604;</i><span>25431</span></div>
                 </div>
               </a>
             </li>
@@ -174,180 +148,51 @@
         </div>
       </div>
       <div class="g-main">
-        <!-- tab模块 -->
-        <div class="m-tabs f-shadow">
-          <h3><a class="z-crt" herf="#">产品设计</a></h3><h3><a href="#">编程语言</a></h3>
+        <div class="m-list">
+          <!-- tab模块 -->
+          <div class="list_hd">
+            <h3 class="m-tab f-shadow"><a class="z-crt switch_btn" href="#">产品设计</a><a class="switch_btn" href="#">编程语言</a></h3>
+          </div>
+          <!-- 课程模块 -->
+          <ul class="list_bd">
+            <li class="m-card f-shadow">
+              <!-- 卡片模块 -->
+              <img class="card_poster" src="./images/course_big1.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" />
+              <a class="card_name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
+              <a class="card_provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
+              <div class="card_count"><div class="count_border"><i class="u-icon u-people">&#xe604;</i><span class="count_num">12345</span></div></div>
+              <div class="card_price"><em>&yen; 98.9</em></div>
+              <!-- 浮层模块 -->
+              <div class="card_popup">
+                <div class="m-popup f-shadow">
+                  <img class="popup_poster" src="./images/course_big1.jpg" alt="课程封面" width="223" height="124" />
+                  <div class="popup_info">
+                    <div class="info_title f-toe">前端工程师微专业</div>
+                    <div class="info_count"><i class="u-icon u-people">&#xe604;</i><span class="count_num">12345</span>人在学</div>
+                    <div class="info_provider f-toe">发布者：网易云课堂</div>
+                    <div class="info_category">分类：暂无</div>
+                  </div>
+                  <div class="popup_describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <!-- 课程模块 -->
-        <ul class="m-courses">
-          <li class="card f-shadow">
-            <!-- 卡片模块 -->
-            <a class="poster" href="#"><img src="./images/course_big1.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
-            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
-            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
-            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
-            <em class="price">&yen; 98.9</em>
-            <!-- 浮层模块 -->
-            <div class="pop f-shadow">
-              <img src="./images/course_big1.jpg" alt="课程封面" width="223" height="124" />
-              <div class="info">
-                <div class="title f-toe">前端工程师微专业</div>
-                <div class="studys">12345 人在学</div>
-                <div class="post f-toe">发布者：网易云课堂</div>
-                <div class="category">分类：暂无</div>
-              </div>
-              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
-            </div>
-          </li>
-          <li class="card f-shadow">
-            <!-- 卡片模块 -->
-            <a class="poster" href="#"><img src="./images/course_big2.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
-            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
-            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
-            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
-            <em class="price">&yen; 98.9</em>
-            <!-- 浮层模块 -->
-            <div class="pop f-shadow">
-              <img src="./images/course_big2.jpg" alt="课程封面" width="223" height="124" />
-              <div class="info">
-                <div class="title f-toe">前端工程师微专业</div>
-                <div class="studys">12345 人在学</div>
-                <div class="post f-toe">发布者：网易云课堂</div>
-                <div class="category">分类：暂无</div>
-              </div>
-              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
-            </div>
-          </li>
-          <li class="card f-shadow">
-            <!-- 卡片模块 -->
-            <a class="poster" href="#"><img src="./images/course_big3.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
-            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
-            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
-            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
-            <em class="price">&yen; 98.9</em>
-            <!-- 浮层模块 -->
-            <div class="pop f-shadow">
-              <img src="./images/course_big3.jpg" alt="课程封面" width="223" height="124" />
-              <div class="info">
-                <div class="title f-toe">前端工程师微专业</div>
-                <div class="studys">12345 人在学</div>
-                <div class="post f-toe">发布者：网易云课堂</div>
-                <div class="category">分类：暂无</div>
-              </div>
-              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
-            </div>
-          </li>
-          <li class="card f-shadow">
-            <!-- 卡片模块 -->
-            <a class="poster" href="#"><img src="./images/course_big4.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
-            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
-            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
-            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
-            <em class="price">&yen; 98.9</em>
-            <!-- 浮层模块 -->
-            <div class="pop f-shadow">
-              <img src="./images/course_big4.jpg" alt="课程封面" width="223" height="124" />
-              <div class="info">
-                <div class="title f-toe">前端工程师微专业</div>
-                <div class="studys">12345 人在学</div>
-                <div class="post f-toe">发布者：网易云课堂</div>
-                <div class="category">分类：暂无</div>
-              </div>
-              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
-            </div>
-          </li>
-          <li class="card f-shadow">
-            <!-- 卡片模块 -->
-            <a class="poster" href="#"><img src="./images/course_big5.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
-            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
-            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
-            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
-            <em class="price">&yen; 98.9</em>
-            <!-- 浮层模块 -->
-            <div class="pop f-shadow">
-              <img src="./images/course_big5.jpg" alt="课程封面" width="223" height="124" />
-              <div class="info">
-                <div class="title f-toe">前端工程师微专业</div>
-                <div class="studys">12345 人在学</div>
-                <div class="post f-toe">发布者：网易云课堂</div>
-                <div class="category">分类：暂无</div>
-              </div>
-              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
-            </div>
-          </li>
-          <li class="card f-shadow">
-            <!-- 卡片模块 -->
-            <a class="poster" href="#"><img src="./images/course_big6.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
-            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
-            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
-            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
-            <em class="price">&yen; 98.9</em>
-            <!-- 浮层模块 -->
-            <div class="pop f-shadow">
-              <img src="./images/course_big6.jpg" alt="课程封面" width="223" height="124" />
-              <div class="info">
-                <div class="title f-toe">前端工程师微专业</div>
-                <div class="studys">12345 人在学</div>
-                <div class="post f-toe">发布者：网易云课堂</div>
-                <div class="category">分类：暂无</div>
-              </div>
-              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
-            </div>
-          </li>
-          <li class="card f-shadow">
-            <!-- 卡片模块 -->
-            <a class="poster" href="#"><img src="./images/course_big3.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
-            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
-            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
-            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
-            <em class="price">&yen; 98.9</em>
-            <!-- 浮层模块 -->
-            <div class="pop f-shadow">
-              <img src="./images/course_big3.jpg" alt="课程封面" width="223" height="124" />
-              <div class="info">
-                <div class="title f-toe">前端工程师微专业</div>
-                <div class="studys">12345 人在学</div>
-                <div class="post f-toe">发布者：网易云课堂</div>
-                <div class="category">分类：暂无</div>
-              </div>
-              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
-            </div>
-          </li>
-          <li class="card f-shadow">
-            <!-- 卡片模块 -->
-            <a class="poster" href="#"><img src="./images/course_big6.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" /></a>
-            <a class="name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
-            <a class="provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
-            <div class="count"><i class="u-icon">&#xe604;</i> 12345</div>
-            <em class="price">&yen; 98.9</em>
-            <!-- 浮层模块 -->
-            <div class="pop f-shadow">
-              <img src="./images/course_big6.jpg" alt="课程封面" width="223" height="124" />
-              <div class="info">
-                <div class="title f-toe">前端工程师微专业</div>
-                <div class="studys">12345 人在学</div>
-                <div class="post f-toe">发布者：网易云课堂</div>
-                <div class="category">分类：暂无</div>
-              </div>
-              <div class="describe f-tf">前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业前端工程师微专业</div>
-            </div>
-          </li>
-        </ul>
       </div>
       <!-- 分页器模块 -->
-      <div class="j-pagerWrap">
-        <!-- <ul class="m-pager">
-          <li class="prev"><a href="javascript:void(0)">&lt;</a></li>
-          <li class="page"><a href="?page=1">1</a></li>
-          <li class="page"><span>...</span></li>
-          <li class="page z-crt"><a href="?page=3">3</a></li>
-          <li class="page"><a href="?page=4">4</a></li>
-          <li class="page"><a href="?page=5">5</a></li>
-          <li class="page"><a href="?page=6">6</a></li>
-          <li class="page"><span>...</span></li>
-          <li class="page"><a href="?page=8">8</a></li>
-          <li class="next"><a href="javascript:void(0)">&gt;</a></li>
-        </ul> -->
+      <div class="j-pager_wrap">
+        <ul class="m-pager">
+          <li class="pager_page prev"><a href="javascript:void(0)">&lt;</a></li>
+          <li class="pager_page"><a href="?pager=1">1</a></li>
+          <li class="pager_page"><span>...</span></li>
+          <li class="pager_page z-crt"><a href="?pager=3">3</a></li>
+          <li class="pager_page"><a href="?pager=4">4</a></li>
+          <li class="pager_page"><a href="?pager=5">5</a></li>
+          <li class="pager_page"><a href="?pager=6">6</a></li>
+          <li class="pager_page"><span>...</span></li>
+          <li class="pager_page"><a href="?pager=8">8</a></li>
+          <li class="pager_page next"><a href="javascript:void(0)">&gt;</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -364,21 +209,21 @@
         </div>
       </div>
       <!-- 友情链接 -->
-      <div class="m-links friend f-fl">
+      <div class="m-link friend f-fl">
         <h6>友情链接</h6>
         <a href="http://open.163.com/">网易公开课</a>
         <a href="http://study.163.com/">网易云课堂</a>
         <a href="http://www.icourse163.org//">中国大学MOOC</a>
       </div>
       <!-- 关于我们 -->
-      <div class="m-links about f-fl">
+      <div class="m-link about f-fl">
         <h6>我们</h6>
         <a href="#">关于</a>
         <a href="#">联系</a>
         <a href="#">关注 <i class="u-icon">&#xe635;</i></a>
       </div>
       <!-- 更多 -->
-      <div class="m-links more f-fl">
+      <div class="m-link more f-fl">
         <h6>更多</h6>
         <a href="#">常见问题</a>
         <a href="#">意见反馈</a>
@@ -400,25 +245,25 @@
   </div>
   <div class="m-video">
     <i class="u-icon close">&#xe606;</i>
-    <div>请观看下面视频：</div>
-    <video controls="controls" download="no" width="100%" height="510">
+    <div class="">请观看下面视频：</div>
+    <video controls="controls"  width="890" height="510">
       您的浏览器不支持video标签，请升级您的浏览器以获得更好的浏览体验！
       <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" type="video/mp4" />
       <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.webm" type="video/webm" />
       <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.ogg" type="video/ogg" />
-      <object data="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" type="application/x-sockware-flash" width="100%" height="510">
-        <param name="quality" value="high" />
-        <param name="allowfullscreen" value="true" />
-        <embed src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" width="100%" height="510" autostart="false" loop="false" />
+      <object data="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.swf" type="application/x-sockware-flash" width="890" height="510">
+        <!-- <param name="quality" value="high" />
+        <param name="allowfullscreen" value="true" /> -->
+        <embed src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.flv" width="890" height="510" autostart="false" loop="false" />
       </object>
     </video>
   </div>
 </div>
 <script src="./js/util.js"></script>
 <script src="./js/tip.js"></script>
-<script src="./js/follow.js"></script>
-<script src="./js/banner.js"></script>
-<script src="./js/pager.js"></script>
+<!-- <script src="./js/follow.js"></script> -->
+<!-- <script src="./js/banner.js"></script> -->
+<!-- <script src="./js/pagerr.js"></script> -->
 <script src="./js/shell.js"></script>
 </body>
 </html>

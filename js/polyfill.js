@@ -1,6 +1,7 @@
 // IE8兼容
-(function(){
+(function () {
   // 兼容bind函数
+  // IE8及IE8之前浏览器不支持bind方法
   if (!Function.prototype.bind) {
     Function.prototype.bind = function(oThis) {
       if (typeof this !== 'function') {
@@ -34,6 +35,7 @@
   }
 
   // 兼容Array.prototype.indexOf
+  // IE8及IE8之前浏览器不支持indexOf
   if (!Array.prototype.indexOf){
     Array.prototype.indexOf = function(searchElement){
       if (this == null){ throw new TypeError('"this"is null or not defined') }
@@ -56,6 +58,7 @@
   }
 
   // 兼容Array.prototype.forEach
+  // IE8及IE8之前浏览器不支持forEach
   if (!Array.prototype.forEach){
     Array.prototype.forEach = function(callback){
       var len = this.length;
@@ -71,6 +74,7 @@
   }
 
   // 兼容String.prototype.trim
+  // IE8及IE8之前版本不支持addEventListener
   if (!String.prototype.trim){
     String.prototype.trim = function(){
       return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
@@ -78,6 +82,7 @@
   }
 
   // 兼容preventDefault
+  // IE8及IE8之前版本不支持addEventListener
   if (!Event.prototype.preventDefault) {
     Event.prototype.preventDefault=function() {
       this.returnValue=false;
@@ -85,6 +90,7 @@
   }
   
   // 兼容stopPropagation
+  // IE8及IE8之前版本不支持addEventListener
   if (!Event.prototype.stopPropagation) {
     Event.prototype.stopPropagation=function() {
       this.cancelBubble=true;
@@ -92,6 +98,7 @@
   }
 
   // 兼容addEventListener/removeEventListener
+  // IE8及IE8之前版本不支持addEventListener
   if (!Element.prototype.addEventListener) {
     var eventListeners=[];
     
@@ -152,6 +159,6 @@
       Window.prototype.removeEventListener=removeEventListener;
     }
   }
-})()
+}())
 
   
