@@ -53,7 +53,6 @@
 
   /**
    * 提示条组件
-   * @class Tip
    */
   class Tip {
     /**
@@ -64,13 +63,10 @@
       this.el = document.querySelector(opts.el) || document.body;
       this.component = this._layout.cloneNode(true);
       this.msgBox = this.component.querySelector('.tip_msg');
-      this.clsBtn = this.component.querySelector('.tip_close');
-      this.detail = this.component.querySelector('.tip_detail');
     }
 
     /**
      * Tip组件初始化
-     * @private _init
      */
     _init() {
       this._initEvent();
@@ -79,11 +75,12 @@
 
     /**
      * 初始化事件绑定
-     * @method _bindEvent
      */
     _initEvent() {
-      this.clsBtn.addEventListener('click', () => this.emit('close'));
-      this.detail.addEventListener('click', () => this.emit('detail'));
+      const clsBtn = this.component.querySelector('.tip_close');
+      const detail = this.component.querySelector('.tip_detail');
+      clsBtn.addEventListener('click', () => this.emit('close'));
+      detail.addEventListener('click', () => this.emit('detail'));
     }
 
     /**
@@ -106,7 +103,6 @@
     /**
      * 展示方法
      * @param {string|node} msg
-     * @interface show
      */
     show(msg) {
       this.setContent(msg);
@@ -117,7 +113,6 @@
 
     /**
      * 隐藏方法
-     * @interface hide
      */
     hide() {
       util.delClass(this.component, 'z-show');

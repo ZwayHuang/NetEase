@@ -37,9 +37,9 @@ const util = (function() {
       }
     },
 
-    ajax(method, URL, content, async, onSucc, onFail) {
+    ajax(method, url, content, async, onSucc, onFail) {
       const xhr = new XMLHttpRequest();
-      xhr.open(method, URL, async);
+      xhr.open(method, url, async);
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
@@ -49,7 +49,7 @@ const util = (function() {
           }
         }
       };
-      xhr.send(vContent);
+      xhr.send(content);
     },
 
     getDataSet(element) {

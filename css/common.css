@@ -117,8 +117,8 @@
 /* 关注模块 */
 .m-follow { font-size: 1.2rem; }
 
-.m-follow .follow_subscribe,
-.m-follow .follow_cancel,
+.m-follow .follow_btn,
+.m-follow .follow_cancel_wrap,
 .m-follow .follow_fans {
   display: inline-block;
   border-radius: 2px;
@@ -126,24 +126,24 @@
   text-align: center;
 }
 
-.m-follow .follow_subscribe,
-.m-follow .follow_cancel {
+.m-follow .follow_btn,
+.m-follow .follow_cancel_wrap {
   display: none;
 }
 .m-follow .z-active { display: inline-block; }
 
-.m-follow .follow_subscribe {
+.m-follow .follow_btn {
   width: 4.5em;
   background: #21a557;
 }
-.m-follow .follow_subscribe:active { background: #2fb556; }
+.m-follow .follow_btn:active { background: #2fb556; }
 
-.m-follow .follow_cancel {
+.m-follow .follow_cancel_wrap {
   width: 8em;
   border: 1px solid #d8d8d8;
   background: #eee;
 }
-.m-follow .follow_cancel:hover { background: #fff; }
+.m-follow .follow_cancel_wrap:hover { background: #fff; }
 .m-follow .cancel_hook { font-size: 1.334em; }
 
 .m-follow .cancel_line {
@@ -185,53 +185,60 @@
 }
 
 /* 轮播图模块 */
-.m-banner {
+.m-slider {
   position: relative;
-  /* top: 0;
-  left: 0; */
-  /* width: 100%; */
-  /* height: 46em; */
-  /* overflow: hidden; */
 }
 
-.m-banner .banner_slider {
+.m-slider,
+.m-slider .slider {
+  width: 100%;
+  height: 100%;
+}
+
+.m-slider .slider {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
+  overflow: hidden;
   opacity: 0;
   z-index: 0;
-  transform: translate(-50%, 0) translateZ(0); /* 需要做IE8兼容 */
   transition: opacity 1s ease-in-out;
 }
 
-.m-banner .banner_slider.z-current {
+.m-slider .slider.z-current {
   opacity: 1;
   z-index: 1;
 }
 
-/* .m-banner img {
-  width: 165.2em;
-  height: 46em;
-} */
-
-.m-banner .banner_cursor {
+.m-slider img {
   position: absolute;
-  bottom: 3em;
-  width: 100%;
-  text-align: center;
-  z-index: 1;
+  top: 0;
+  left: 50%;
+  /* width: 100%; */
+  height: 100%;
+  transform: translate(-50%, 0) translateZ(0);
 }
 
-.m-banner .banner_cursor li {
+.m-cursor {
+  position: absolute;
+  right: 0;
+  bottom: 3em;
+  left: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.m-cursor .cursor {
   display: inline-block;
   width: 1em;
   height: 1em;
   margin-left: 1.3em;
   border-radius: 50%;
   background: #fff;
+  cursor: pointer;
 }
-.m-banner .banner_cursor li:first-child { margin: 0; }
-.m-banner .banner_cursor li.z-current { background: gray; }
+.m-cursor .cursor:first-child { margin: 0; }
+.m-cursor .cursor.z-current { background: gray; }
 
 /* 产品模块 */
 .m-product {

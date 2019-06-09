@@ -27,7 +27,7 @@
 <div class="g-doc f-bgray-1">
   <!-- 顶部提示条 -->
   <div class="f-bgray">
-    <div class="g-limit" id="j-tipwrap">
+    <div class="g-limit w-tip" id="j-tip_wrap">
       <!-- <div class="m-tip z-show f-cb">
         <p class="tip_msg">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！</p>
         <a class="tip_detail u-link" href="http://study.163.com/">立即查看&gt;</a>
@@ -41,12 +41,12 @@
       <!-- 标题模块 -->
       <h1 class="m-title"><a href="http://study.163.com/"><em class="title_logo f-cgreen">EDU</em><i class="title_line f-cgreen">I</i><em class="title_txt">网易教育产品部</em></a></h1>
       <!-- 关注模块 -->
-      <div class="follow_wrap" id="j-follow_wrap">
-        <div class="m-follow">
-          <a class="follow_subscribe z-active f-shadow" href="#">+ 关注</a>
+      <div class="w-follow" id="j-follow_wrap">
+        <!-- <div class="m-follow">
+          <a class="follow_btn z-active f-shadow" href="#">+ 关注</a>
           <div class="follow_cancel"><i class="cancel_hook u-icon">&#xe733;</i>已关注<i class="cancel_line">I</i><a class="cancel_btn u-link" href="#">取消</a></div>
           <div class="follow_fans">粉丝 45</div>
-        </div>
+        </div> -->
       </div>
       <!-- 导航条模块 -->
       <ul class="m-nav">
@@ -58,13 +58,17 @@
     </header>
   </div>
   <!-- 轮播图 -->
-  <div class="banner_wrap" id="j-banner_wrap">
-    <div class="m-banner">
-      <div class="banner_slider"><img src="./images/banner1.jpg" alt="知识改变世界" width="1652" height="460" /></div>
-      <div class="banner_slider z-current"><img src="./images/banner2.jpg" alt="教育改变未来" width="1652" height="460" /></div>
-      <div class="banner_slider"><img src="./images/banner3.jpg" alt="遇见更好的自己" width="1652" height="460" /></div>
-      <ul class="banner_cursor"><li></li><li class="z-current"></li><li></li></ul>
-    </div>
+  <div class="w-banner" id="j-banner_wrap">
+    <!-- <div class="m-slider">
+      <div class="slider"><img src="./images/banner1.jpg" alt="知识改变世界" /></div>
+      <div class="slider z-current"><img src="./images/banner2.jpg" alt="教育改变未来" /></div>
+      <div class="slider"><img src="./images/banner3.jpg" alt="遇见更好的自己" /></div>
+    </div> -->
+    <ul class="m-cursor">
+      <li class="cursor"></li>
+      <li class="cursor z-current"></li>
+      <li class="cursor"></li>
+    </ul>
   </div>
   <!-- 产品展示 -->
   <div class="g-limit">
@@ -117,7 +121,7 @@
           <div class="side_content m-intro">
             <p class="intro_txt">观看下面的视频来了解吧</p>
             <div class="intro_poster">
-              <img src="./images/videolink.jpg" alt="机构介绍视频封面" width="180" height="110" />
+              <img src="./images/videolink.jpg" alt="机构介绍视频封面" />
               <a class="u-icon poster_play_btn" href="#">&#xe607;</a>
             </div>
           </div>
@@ -128,7 +132,7 @@
           <ul class="side_content m-hotlist">
             <li class="hotlist_item">
               <a class="f-cb" href="#">
-                <img src="./images/course_small1.jpg" alt="课程图标" width="50" height="50" />
+                <img src="./images/course_small1.jpg" alt="课程图标" />
                 <div class="item_info">
                   <div>photoshop公开课</div>
                   <div><i class="u-icon u-people">&#xe604;</i><span>25741</span></div>
@@ -137,7 +141,7 @@
             </li>
             <li class="hotlist_item">
               <a class="f-cb" href="#">
-                <img src="./images/course_small2.jpg" alt="课程图标" width="50" height="50" />
+                <img src="./images/course_small2.jpg" alt="课程图标" />
                 <div class="item_info">
                   <div>photoshop公开课</div>
                   <div><i class="u-icon u-people">&#xe604;</i><span>25431</span></div>
@@ -157,7 +161,7 @@
           <ul class="list_bd">
             <li class="m-card f-shadow">
               <!-- 卡片模块 -->
-              <img class="card_poster" src="./images/course_big1.jpg" alt="课程封面" title="web前端微专业" width="223" height="124" />
+              <img class="card_poster" src="./images/course_big1.jpg" alt="课程封面" title="web前端微专业" />
               <a class="card_name f-toe" href="#">web前端微专业网易web前端工程师微专业网易web前端工程师微专业</a>
               <a class="card_provider f-toe" href="#">网易web前端工程师微专业网易web前端工程师微专业</a>
               <div class="card_count"><div class="count_border"><i class="u-icon u-people">&#xe604;</i><span class="count_num">12345</span></div></div>
@@ -165,7 +169,7 @@
               <!-- 浮层模块 -->
               <div class="card_popup">
                 <div class="m-popup f-shadow">
-                  <img class="popup_poster" src="./images/course_big1.jpg" alt="课程封面" width="223" height="124" />
+                  <img class="popup_poster" src="./images/course_big1.jpg" alt="课程封面" />
                   <div class="popup_info">
                     <div class="info_title f-toe">前端工程师微专业</div>
                     <div class="info_count"><i class="u-icon u-people">&#xe604;</i><span class="count_num">12345</span>人在学</div>
@@ -180,7 +184,7 @@
         </div>
       </div>
       <!-- 分页器模块 -->
-      <div class="j-pager_wrap">
+      <div class="w-pager" id="j-pager_wrap">
         <ul class="m-pager">
           <li class="pager_page prev"><a href="javascript:void(0)">&lt;</a></li>
           <li class="pager_page"><a href="?pager=1">1</a></li>
@@ -246,23 +250,23 @@
   <div class="m-video">
     <i class="u-icon close">&#xe606;</i>
     <div class="">请观看下面视频：</div>
-    <video controls="controls"  width="890" height="510">
+    <video controls="controls" preload="auto">
       您的浏览器不支持video标签，请升级您的浏览器以获得更好的浏览体验！
       <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" type="video/mp4" />
       <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.webm" type="video/webm" />
       <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.ogg" type="video/ogg" />
-      <object data="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.swf" type="application/x-sockware-flash" width="890" height="510">
+      <object data="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.swf" type="application/x-sockware-flash">
         <!-- <param name="quality" value="high" />
         <param name="allowfullscreen" value="true" /> -->
-        <embed src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.flv" width="890" height="510" autostart="false" loop="false" />
+        <embed src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.flv" autostart="false" loop="false" />
       </object>
     </video>
   </div>
 </div>
 <script src="./js/util.js"></script>
 <script src="./js/tip.js"></script>
-<!-- <script src="./js/follow.js"></script> -->
-<!-- <script src="./js/banner.js"></script> -->
+<script src="./js/follow.js"></script>
+<script src="./js/slider.js"></script>
 <!-- <script src="./js/pagerr.js"></script> -->
 <script src="./js/shell.js"></script>
 </body>

@@ -63,9 +63,68 @@ let page = new Pager({
 
 // util.ajax('GET','http://study.163.com/webDev/couresByCategory.htm');
 */
-(function() {
-  const tip = new Tip({el: '#j-tipwrap'});
+;(function() {
+  const tip = new Tip({el: '#j-tip_wrap'});
   tip.show('网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！');
   tip.on('detail', () => window.location = 'https://study.163.com/');
   tip.on('close', () => tip.hide());
+
+  const follow = new Follow({
+    el: '#j-follow_wrap',
+    followed: false,
+    fans: 10,
+  });
+
+
+  /**
+   * 检测用户是否登录
+   * @return {boolean}
+   */
+  const isLogin = function() {
+    return true;
+  };
+
+  /**
+   * 关注处理函数
+   */
+  function getFollow() {
+    // // 如果已登录
+    // if (isLogin()) {
+    //   util.ajax('GET', 'http://study.163.com/webDev/attention.htm', null, true,
+    //       (code) => {
+    //         if (code == 1) {
+    //           follow.onFollowSucc();
+    //         } else {
+    //           follow.onFailed('关注失败');
+    //         }
+    //         follow.onFollowSucc();
+    //       },
+    //       follow.onFailed);
+    // } else {
+    //   prompt('请先登录');
+    // }
+    setTimeout(() => {
+      follow.onFollowSucc();
+    }, 3000);
+  };
+
+  /**
+   * 取消关注处理函数
+   */
+  function unfollow() {
+    // util.ajax('GET', 'http://study.163.com/webDev/attention.htm', null, true,
+    //     (code) => {
+    //       if (code == 1) {
+    //         follow.onUnfollowSucc();
+    //       } else {
+    //         follow.onFailed('关注失败');
+    //       }
+    //     },
+    //     follow.onFailed);
+    setTimeout(() => {
+      follow.onUnfollowSucc();
+    }, 3000);
+  };
+  follow.on('follow', getFollow);
+  follow.on('unfollow', unfollow);
 })();

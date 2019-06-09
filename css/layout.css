@@ -28,7 +28,7 @@ body,
 .m-follow,
 .m-nav,
 .m-search,
-.m-banner,
+.m-slider,
 .m-product,
 .m-gallery,
 .m-side,
@@ -43,13 +43,19 @@ body,
 .m-record,
 .m-link,
 .m-login,
-.m-video {
+.m-video,
+.w-slider {
   font-size: 1rem;
+}
+
+.w-slider {
+  position: relative;
+  height: 46rem;
 }
 
 .m-title,
 .m-follow,
-.m-nav { line-height: 8.8rem; }
+.m-nav { line-height: 8.8rem !important; }
 
 .m-title,
 .m-follow { float: left; }
@@ -73,7 +79,7 @@ body,
 
 .m-title-ft {
   float: none;
-  line-height: 1;
+  line-height: 1 !important;
 }
 .m-record { margin: 2.8em 0 0 0; }
 .m-link { margin: 8em 0 0 0; }
